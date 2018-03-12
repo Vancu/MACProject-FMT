@@ -1,4 +1,4 @@
-# MACProject-FMT
+# Find My Track
 ## App Description
 Find My Track is an app focused on giving those who need bus/train routes and stop locations an easy to use program that consolidates nearby schedules all in one place, allowing easy access and skipping complicated methods for accessing bus information. Scheduling, alarms, and notifications are the main pull and focus.
 
