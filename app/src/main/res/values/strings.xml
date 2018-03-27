@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">FindMyTrackAlpha1</string>
+    <string-array name="buseCompanyarray">
+        <item>Cattracks</item>
+        <item>Merced TheBus</item>
+    </string-array>
+    <string-array name="CattracksIDarray">
+        <item>C1</item>
+        <item>C2</item>
+        <item>FastCat</item>
+        <item>G</item>
+    </string-array>
+    <string-array name="MercedTheBusIDarray">
+        <item>UC</item>
+        <item>M1</item>
+    </string-array>
+    <integer-array name="MileRanges">
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+    </integer-array>
 </resources>
