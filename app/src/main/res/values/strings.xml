@@ -20,6 +20,7 @@
         <item>5</item>
         <item>10</item>
     </integer-array>
+    <string-array name="emptySpinner"> </string-array>
     <string name="title_activity_logged_in_main_menu">LoggedInMainMenuActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
