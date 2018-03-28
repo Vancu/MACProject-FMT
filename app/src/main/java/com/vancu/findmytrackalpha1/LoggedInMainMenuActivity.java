@@ -1,27 +1,33 @@
 package com.vancu.findmytrackalpha1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+//import android.widget.Button;
 
 public class LoggedInMainMenuActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    //private Button schedule = (Button) findViewById(R.id.userSchedule);
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            //schedule.setVisibility(View.GONE);
             switch (item.getItemId()) {
                 case R.id.navigation_map:
                     mTextMessage.setText(R.string.title_map);
                     return true;
                 case R.id.navigation_schedule:
                     mTextMessage.setText(R.string.title_user_schedule);
+                   // schedule.setVisibility(View.VISIBLE);
                     return true;
                 case R.id.navigation_stops:
                     mTextMessage.setText(R.string.title_stops);
@@ -42,6 +48,11 @@ public class LoggedInMainMenuActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    public void bLoggedInViewSchedule(View view){
+        Intent intent = new Intent (this, LoggedInScheduleActivity.class);
+        startActivity(intent);
     }
 
 }
