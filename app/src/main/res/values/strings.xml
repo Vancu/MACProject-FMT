@@ -20,4 +20,15 @@
         <item>5</item>
         <item>10</item>
     </integer-array>
+    <string name="title_activity_logged_in_main_menu">LoggedInMainMenuActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_map">Map</string>
+    <string name="title_stops">Stops</string>
+    <string name="title_user_schedule">My Schedule</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

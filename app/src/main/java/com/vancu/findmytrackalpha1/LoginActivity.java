@@ -14,7 +14,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void bLoggedInScreen(View view){
-        Intent intent = new Intent (this, LoggedInMainActivity.class);
+        Intent intent = new Intent (this, LoggedInMainMenuActivity.class);
         startActivity(intent);
     }
 }
