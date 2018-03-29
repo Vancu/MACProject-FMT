@@ -1,18 +1,13 @@
 package com.vancu.findmytrackalpha1;
 
 import android.support.v7.app.AppCompatActivity;
-import java.util.ArrayList;
-import java.util.List;
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.SpinnerAdapter;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 import android.widget.Spinner;
+import android.content.Intent;
 
 public class SearchStops extends AppCompatActivity
 {
@@ -91,6 +86,12 @@ public class SearchStops extends AppCompatActivity
 
             }
         });
+    }
+
+    public void bNewStopScheduleTest(View view)
+    {
+        Intent intent = new Intent(this,NewStopSchedule.class);
+        startActivity(intent);
     }
 
 }
