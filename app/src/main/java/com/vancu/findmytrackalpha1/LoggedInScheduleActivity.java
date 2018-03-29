@@ -2,10 +2,13 @@ package com.vancu.findmytrackalpha1;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+//import android.support.design.widget.Snackbar;
+import android.widget.Button;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 public class LoggedInScheduleActivity extends AppCompatActivity {
 
@@ -20,10 +23,34 @@ public class LoggedInScheduleActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                openDialog();
+
+                /*
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(LoggedInScheduleActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.dialog_add_stop, null);
+
+                EditText mSchedule = (EditText) mView.findViewById(tSelectNewStop);
+                Button bSearch = (Button) mView.findViewById(bSearchStop);
+                Button bCustom = (Button) mView.findViewById(bCustomStop);
+                Button bCancelStop = (Button) mView.findViewById(bCancel);
+
+                bSearch.setOnClickListener(new View.OnClickListener(){
+                    @Override
+
+
+                });
+
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                */
             }
         });
+    }
+
+    public void openDialog()
+    {
+        SearchStopsDialog TestDialog = new SearchStopsDialog();
+        TestDialog.show(getSupportFragmentManager(), "example Dialog");
     }
 
 }

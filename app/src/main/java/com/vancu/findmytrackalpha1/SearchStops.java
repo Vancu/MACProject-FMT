@@ -94,4 +94,10 @@ public class SearchStops extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void bNewCustomScheduleTest(View view)
+    {
+        Intent intent = new Intent(this,NewCustomScheduleActivity.class);
+        startActivity(intent);
+    }
+
 }

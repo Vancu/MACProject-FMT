@@ -7,7 +7,7 @@
     tools:context=".NewStopSchedule">
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/etNameSchedule"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginEnd="32dp"
@@ -19,11 +19,11 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/tStopSchedule"
         tools:text="Name for Schedule" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/etBusStopAddress"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginEnd="32dp"
@@ -35,7 +35,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5"
+        app:layout_constraintTop_toBottomOf="@+id/etNameSchedule"
         tools:text="Bus Stop Address" />
 
     <Button
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ranges" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tStopSchedule"
         android:layout_width="155dp"
         android:layout_height="25dp"
         android:layout_marginEnd="197dp"
@@ -79,7 +79,7 @@
         android:layout_marginTop="12dp"
         android:entries="@array/MileRanges"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
 
     <TextView
         android:id="@+id/textView7"
@@ -93,6 +93,6 @@
         android:text="Range (miles)"
         app:layout_constraintEnd_toStartOf="@+id/ranges"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
 
 </android.support.constraint.ConstraintLayout>

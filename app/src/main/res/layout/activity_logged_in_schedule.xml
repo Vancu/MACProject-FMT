@@ -7,7 +7,7 @@
     tools:context="com.vancu.findmytrackalpha1.LoggedInScheduleActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tStopSchedule"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="No Current Schedules Set!"

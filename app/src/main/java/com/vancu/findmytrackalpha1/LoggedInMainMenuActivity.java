@@ -55,4 +55,28 @@ public class LoggedInMainMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void bLoggedInViewMaps(View view){
+        Intent intent = new Intent (this, LoggedInViewMapActivity.class);
+        startActivity(intent);
+    }
+
+    public void bLoggedInViewStops(View view){
+        Intent intent = new Intent (this, SearchStops.class);
+        startActivity(intent);
+    }
+
+    public void bLoggedInViewSettings(View view){
+        Intent intent = new Intent (this, LoggedInSettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void bLoggedInSearchStops(View view){
+        Intent intent = new Intent(this,NewStopSchedule.class);
+        startActivity(intent);
+    }
+    public void bLoggedInCustomStops(View view){
+        Intent intent = new Intent(this,NewCustomScheduleActivity.class);
+        startActivity(intent);
+    }
+
 }
