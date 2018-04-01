@@ -5,14 +5,19 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
 //import android.widget.Button;
 
 public class LoggedInMainMenuActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    private static final int ACTIVITY_NUM = 0;
     //private Button schedule = (Button) findViewById(R.id.userSchedule);
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -46,8 +51,23 @@ public class LoggedInMainMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_logged_in_main_menu);
 
         mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        /*
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottomNavBar);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        */
+        setupBottomNavBar();
+    }
+
+    //sets up the bottom navigation view for current activitiy.
+    public void setupBottomNavBar()
+    {
+        BottomNavigationViewEx BottomNavEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavBar);
+        BottomNavigationViewHelper.setupBottomNaviView(BottomNavEx);
+        BottomNavigationViewHelper.enableNavigation(LoggedInMainMenuActivity.this, BottomNavEx);
+        Menu menu = BottomNavEx.getMenu();
+        MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
+        menuItem.setChecked(true);
+
     }
 
     public void bLoggedInViewSchedule(View view){

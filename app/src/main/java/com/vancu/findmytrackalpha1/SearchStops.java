@@ -2,6 +2,8 @@ package com.vancu.findmytrackalpha1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -9,9 +11,13 @@ import android.widget.Toast;
 import android.widget.Spinner;
 import android.content.Intent;
 
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
+
 public class SearchStops extends AppCompatActivity
 {
 
+    private static final int ACTIVITY_NUM = 2;
     Spinner BusCompany, BusID, Ranges;
 
     ArrayAdapter<CharSequence> adapter;
@@ -98,6 +104,17 @@ public class SearchStops extends AppCompatActivity
     {
         Intent intent = new Intent(this,NewCustomScheduleActivity.class);
         startActivity(intent);
+    }
+
+    //sets up the bottom navigation view for current activitiy.
+    public void setupBottomNavBar()
+    {
+        BottomNavigationViewEx BottomNavEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavBar);
+        BottomNavigationViewHelper.setupBottomNaviView(BottomNavEx);
+        BottomNavigationViewHelper.enableNavigation(SearchStops.this, BottomNavEx);
+        Menu menu = BottomNavEx.getMenu();
+        MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
+        menuItem.setChecked(true);
     }
 
 }
