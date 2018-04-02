@@ -127,4 +127,5 @@
     <string name="my_schedule">My Schedule</string>
     <string name="map">Map</string>
     <string name="stops">Stops</string>
+    <string name="home">Home</string>
 </resources>

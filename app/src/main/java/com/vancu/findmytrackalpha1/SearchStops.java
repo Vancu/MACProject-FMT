@@ -17,7 +17,7 @@ import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
 public class SearchStops extends AppCompatActivity
 {
 
-    private static final int ACTIVITY_NUM = 2;
+    private static final int ACTIVITY_NUM = 3;
     Spinner BusCompany, BusID, Ranges;
 
     ArrayAdapter<CharSequence> adapter;
@@ -27,6 +27,8 @@ public class SearchStops extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_stops);
+
+        setupBottomNavBar();
 
         BusCompany = (Spinner) findViewById(R.id.busCompanyspinner);
         adapter = ArrayAdapter.createFromResource(this,R.array.buseCompanyarray,android.R.layout.simple_spinner_item);

@@ -19,7 +19,6 @@ public class LoggedInMainMenuActivity extends AppCompatActivity {
     private TextView mTextMessage;
     private static final int ACTIVITY_NUM = 0;
     //private Button schedule = (Button) findViewById(R.id.userSchedule);
-    //this is a test to see if changes appear on github
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {

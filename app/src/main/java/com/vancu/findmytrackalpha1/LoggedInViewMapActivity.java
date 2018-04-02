@@ -10,17 +10,17 @@ import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
 
 public class LoggedInViewMapActivity extends AppCompatActivity {
 
-    private static final int ACTIVITY_NUM = 0;
+    private static final int ACTIVITY_NUM = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in_view_map);
 
-        //setupBottomNavBar();
+        setupBottomNavBar();
     }
 
-    /*sets up the bottom navigation view for current activitiy.
+    //sets up the bottom navigation view for current activitiy.
     public void setupBottomNavBar()
     {
         BottomNavigationViewEx BottomNavEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavBar);
@@ -30,5 +30,5 @@ public class LoggedInViewMapActivity extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
     }
-    */
+
 }

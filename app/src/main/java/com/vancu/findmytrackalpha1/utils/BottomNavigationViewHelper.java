@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.vancu.findmytrackalpha1.LoggedInMainMenuActivity;
 import com.vancu.findmytrackalpha1.LoggedInScheduleActivity;
 import com.vancu.findmytrackalpha1.LoggedInSettingsActivity;
 import com.vancu.findmytrackalpha1.LoggedInViewMapActivity;
@@ -33,23 +34,28 @@ public class BottomNavigationViewHelper {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent intent0 = new Intent(context, LoggedInMainMenuActivity.class); //ACTIVITY_NUM = 0
+                        context.startActivity(intent0);
+                        return true;
+
                     case R.id.navigation_map:
-                        Intent intent1 = new Intent(context, LoggedInViewMapActivity.class); //ACTIVITY_NUM = 0
+                        Intent intent1 = new Intent(context, LoggedInViewMapActivity.class); //ACTIVITY_NUM = 1
                         context.startActivity(intent1);
                         return true;
 
                     case R.id.navigation_schedule:
-                        Intent intent2 = new Intent(context, LoggedInScheduleActivity.class); //ACTIVITY_NUM = 1
+                        Intent intent2 = new Intent(context, LoggedInScheduleActivity.class); //ACTIVITY_NUM = 2
                         context.startActivity(intent2);
                         return true;
 
                     case R.id.navigation_stops:
-                        Intent intent3 = new Intent(context, SearchStops.class); //ACTIVITY_NUM = 2
+                        Intent intent3 = new Intent(context, SearchStops.class); //ACTIVITY_NUM = 3
                         context.startActivity(intent3);
                         return true;
 
                     case R.id.navigation_settings:
-                        Intent intent4 = new Intent(context, LoggedInSettingsActivity.class); //ACTIVITY_NUM = 3
+                        Intent intent4 = new Intent(context, LoggedInSettingsActivity.class); //ACTIVITY_NUM = 4
                         context.startActivity(intent4);
                         return true;
                 }
