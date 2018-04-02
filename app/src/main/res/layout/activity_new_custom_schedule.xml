@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewStopSchedule">
+
+    <Spinner
+        android:id="@+id/RepeatSpinner"
+        android:layout_width="349dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tRepeat" />
+
+    <TextView
+        android:id="@+id/tTimeDeparture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="252dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="144dp"
+        android:text="Time Departure:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
+
+    <ToggleButton
+        android:id="@+id/bFriday"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="58dp"
+        android:text="ToggleButton"
+        android:textOff="Fri"
+        android:textOn="Fri"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toStartOf="@+id/bSat"
+        app:layout_constraintStart_toEndOf="@+id/bThur"
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
+
+    <ToggleButton
+        android:id="@+id/bSat"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="58dp"
+        android:text="ToggleButton"
+        android:textOff="Sat"
+        android:textOn="Sat"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bFriday"
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
+
+    <ToggleButton
+        android:id="@+id/bThur"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="58dp"
+        android:text="ToggleButton"
+        android:textOff="Thur"
+        android:textOn="Thur"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toStartOf="@+id/bFriday"
+        app:layout_constraintStart_toEndOf="@+id/bWed"
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
+
+    <ToggleButton
+        android:id="@+id/bWed"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="58dp"
+        android:text="ToggleButton"
+        android:textOff="Wed"
+        android:textOn="Wed"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toStartOf="@+id/bThur"
+        app:layout_constraintStart_toEndOf="@+id/bTue"
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
+
+    <ToggleButton
+        android:id="@+id/bTue"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="58dp"
+        android:text="ToggleButton"
+        android:textOff="Tue"
+        android:textOn="Tue"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toStartOf="@+id/bWed"
+        app:layout_constraintStart_toEndOf="@+id/bMon"
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
+
+    <ToggleButton
+        android:id="@+id/bMon"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="58dp"
+        android:text="ToggleButton"
+        android:textOff="Mon"
+        android:textOn="Mon"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toStartOf="@+id/bTue"
+        app:layout_constraintStart_toEndOf="@+id/bSun"
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
+
+    <EditText
+        android:id="@+id/etNameSchedule"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Name for Schedule"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tStopSchedule" />
+
+    <EditText
+        android:id="@+id/etBusStopAddress"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="Bus Stop Address"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNameSchedule" />
+
+    <Button
+        android:id="@+id/bSearch"
+        android:layout_width="147dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginStart="119dp"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RepeatSpinner" />
+
+    <TextView
+        android:id="@+id/tStopSchedule"
+        android:layout_width="155dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="197dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="197dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="New Stop Schedule"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="304dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="27dp"
+        android:text="Repeat:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeDepatureSpinner" />
+
+    <TextView
+        android:id="@+id/tDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="312dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="14dp"
+        android:text="Days"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
+
+    <ToggleButton
+        android:id="@+id/bSun"
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="19dp"
+        android:text="ToggleButton"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textOff="Sun"
+        android:textOn="Sun"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toStartOf="@+id/bMon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tDays" />
+
+    <Spinner
+        android:id="@+id/TimeDepatureSpinner"
+        android:layout_width="349dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tTimeDeparture" />
+
+</android.support.constraint.ConstraintLayout>
