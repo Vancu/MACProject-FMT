@@ -7,7 +7,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Toast;
 import android.widget.Spinner;
 import android.content.Intent;
 
@@ -31,7 +30,7 @@ public class SearchStops extends AppCompatActivity
         setupBottomNavBar();
 
         BusCompany = (Spinner) findViewById(R.id.busCompanyspinner);
-        adapter = ArrayAdapter.createFromResource(this,R.array.buseCompanyarray,android.R.layout.simple_spinner_item);
+        adapter = ArrayAdapter.createFromResource(this,R.array.busCompanyarray,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         BusCompany.setAdapter(adapter);
 
@@ -49,7 +48,6 @@ public class SearchStops extends AppCompatActivity
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,int position,long id)
             {
-                Toast.makeText(getBaseContext(),parent.getItemAtPosition(position)+" is selected",Toast.LENGTH_LONG).show();
                 if(position == 0)
                 {
                     //sets BusID to cattracks
@@ -73,7 +71,7 @@ public class SearchStops extends AppCompatActivity
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,int position,long id)
             {
-                Toast.makeText(getBaseContext(),parent.getItemAtPosition(position)+" is selected",Toast.LENGTH_LONG).show();
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent)
@@ -86,7 +84,7 @@ public class SearchStops extends AppCompatActivity
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,int position,long id)
             {
-                Toast.makeText(getBaseContext(),parent.getItemAtPosition(position)+" is selected",Toast.LENGTH_LONG).show();
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent)

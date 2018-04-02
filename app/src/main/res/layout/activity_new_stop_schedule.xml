@@ -16,11 +16,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="14dp"
         android:ems="10"
+        android:hint="Name for Schedule"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tStopSchedule"
-        tools:text="Name for Schedule" />
+        app:layout_constraintTop_toBottomOf="@+id/tStopSchedule" />
 
     <EditText
         android:id="@+id/etBusStopAddress"
@@ -32,11 +32,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="17dp"
         android:ems="10"
+        android:hint="Bus Stop Address"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNameSchedule"
-        tools:text="Bus Stop Address" />
+        app:layout_constraintTop_toBottomOf="@+id/etNameSchedule" />
 
     <Button
         android:id="@+id/button4"
