@@ -25,9 +25,9 @@ public class SearchStopsDialog extends AppCompatDialogFragment {
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
                     }
                 });
+
 
         return builder.create();
     }

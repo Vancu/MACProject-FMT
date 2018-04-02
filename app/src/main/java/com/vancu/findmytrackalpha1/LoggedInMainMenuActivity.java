@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -56,6 +57,15 @@ public class LoggedInMainMenuActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         */
         setupBottomNavBar();
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog();
+
+            }
+        });
     }
 
     //sets up the bottom navigation view for current activitiy.
@@ -96,6 +106,11 @@ public class LoggedInMainMenuActivity extends AppCompatActivity {
     }
     public void bLoggedInCustomStops(View view){
         Intent intent = new Intent(this,NewCustomScheduleActivity.class);
+        startActivity(intent);
+    }
+
+    public void openDialog(){
+        Intent intent = new Intent(this,LoginRegisterActivity.class);
         startActivity(intent);
     }
 

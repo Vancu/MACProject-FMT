@@ -15,7 +15,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void bRegisterDummy(View view)
     {
-        Intent intent = new Intent (this,SearchStops.class);
+        Intent intent = new Intent (this,LoginActivity.class);
         startActivity(intent);
     }
 }
