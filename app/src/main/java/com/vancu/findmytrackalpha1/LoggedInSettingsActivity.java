@@ -11,6 +11,7 @@ import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
 public class LoggedInSettingsActivity extends AppCompatActivity {
 
     private static final int ACTIVITY_NUM = 4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

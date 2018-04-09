@@ -177,4 +177,7 @@
     <string name="map">Map</string>
     <string name="stops">Stops</string>
     <string name="home">Home</string>
+    <string name="draw_marker_options_title">Villages Apts. "M" Street</string>
+    <string name="draw_marker_options_snippet">Bus Company: CatTracks\nBus ID:C2, E, E2 \n\nBus Company: TheBus \nBus ID: L, M3, UC, W2</string>
+    <string name="search_in_map">Search</string>
 </resources>

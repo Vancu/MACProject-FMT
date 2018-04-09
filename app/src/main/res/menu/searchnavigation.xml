@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Button for Search", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_search_in_map"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/search_in_map"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
+
+
+
+</menu>
