@@ -1,21 +1,26 @@
 package com.vancu.findmytrackalpha1;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.location.Location;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
+import com.google.gson.JsonObject;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.maps.MapView;
@@ -25,6 +30,8 @@ import com.mapbox.mapboxsdk.annotations.IconFactory;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.plugins.locationlayer.LocationLayerMode;
 import com.mapbox.mapboxsdk.plugins.locationlayer.LocationLayerPlugin;
+import com.mapbox.mapboxsdk.plugins.places.autocomplete.PlaceAutocomplete;
+import com.mapbox.mapboxsdk.plugins.places.autocomplete.model.PlaceOptions;
 import com.mapbox.mapboxsdk.style.layers.PropertyFactory;
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
@@ -36,24 +43,16 @@ import com.mapbox.services.android.telemetry.permissions.PermissionsManager;
 import com.mapbox.services.android.telemetry.permissions.PermissionsListener;
 import com.mapbox.services.commons.geojson.Feature;
 import com.mapbox.services.commons.geojson.FeatureCollection;
-import com.mapbox.services.commons.geojson.Point;
+//import com.mapbox.services.commons.geojson.Point;
 import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
 
 import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
-import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
-import com.mapbox.services.android.telemetry.location.LocationEngine;
-import com.mapbox.services.android.telemetry.location.LocationEngineListener;
-import com.mapbox.services.android.telemetry.location.LocationEnginePriority;
-import com.mapbox.services.android.telemetry.permissions.PermissionsListener;
-import com.mapbox.services.android.telemetry.permissions.PermissionsManager;
-
-
-import java.util.ArrayList;
-import java.util.List;
+import com.mapbox.api.geocoding.v5.models.CarmenFeature;
+import com.mapbox.geojson.Point;
 
 public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
+    private static final int REQUEST_CODE_AUTOCOMPLETE = 1;
     private static final int ACTIVITY_NUM = 1;
     private static final String MARKER_SOURCE = "markers-source";
     private static final String MARKER_STYLE_LAYER = "markers-style-layer";
@@ -68,6 +67,11 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
     private LocationEngine locationEngine;
     private LocationEngineListener locationEngineListener;
     private Location originLocation;
+
+    private CarmenFeature home;
+    private CarmenFeature work;
+    private String geojsonSourceLayerId = "geojsonSourceLayerId";
+    private String symbolIconId = "symbolIconId";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,48 +161,6 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         }
     }
 
-    /*
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_search_in_map:
-                // User chose the "Settings" item, show the app settings UI...
-                return true;
-
-            default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-                return super.onOptionsItemSelected(item);
-
-        }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.searchnavigation, menu);
-
-        MenuItem searchItem = menu.findItem(R.id.action_search_in_map);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
-
-        // Configure the search info and add any event listeners...
-
-        return super.onCreateOptionsMenu(menu);
-    }
-    */
-
     @Override
     public void onMapReady(MapboxMap mapboxMap) {
         LoggedInViewMapActivity.this.mapboxMap = mapboxMap;
@@ -208,7 +170,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         mapboxMap.addImage(MARKER_IMAGE, icon);
         Bitmap icon2 = BitmapFactory.decodeResource(
                 LoggedInViewMapActivity.this.getResources(), R.drawable.ic_action_name2);
-        addMarkers();
+        //addMarkers();
 
         Icon convertedIcon = IconFactory.getInstance(LoggedInViewMapActivity.this).fromBitmap(icon);
         Icon convertedIcon2 = IconFactory.getInstance(LoggedInViewMapActivity.this).fromBitmap(icon2);
@@ -225,16 +187,107 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                 .snippet(getString(R.string.draw_marker_options_snippet))
                 .icon(convertedIcon2));
 
+        initSearchFab();
+        addUserLocations();
+
+        // Add the symbol layer icon to map for future use
+        Bitmap icon3 = BitmapFactory.decodeResource(
+                LoggedInViewMapActivity.this.getResources(), R.drawable.ic_search_black_24dp);
+        mapboxMap.addImage(symbolIconId, icon3);
+
+        // Create an empty GeoJSON source using the empty feature collection
+        setUpSource();
+
+        // Set up a new symbol layer for displaying the searched location's feature coordinates
+        //THIS IS FOR WHEN YOU WANT TO ADD A POINT AFTER A USER SEARCHES FOR A LOCATION, CURRENTLY LEFT UNUSED FOR NOW
+        //setupLayer();
+
     }
 
+    private void initSearchFab() {
+        FloatingActionButton searchFab = findViewById(R.id.fab_location_search);
+        searchFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new PlaceAutocomplete.IntentBuilder()
+                        .accessToken(Mapbox.getAccessToken())
+                        .placeOptions(PlaceOptions.builder()
+                                .backgroundColor(Color.parseColor("#EEEEEE"))
+                                .limit(10)
+                                .addInjectedFeature(home)
+                                .addInjectedFeature(work)
+                                .build(PlaceOptions.MODE_CARDS))
+                        .build(LoggedInViewMapActivity.this);
+                startActivityForResult(intent, REQUEST_CODE_AUTOCOMPLETE);
+            }
+        });
+    }
+
+    private void addUserLocations() {
+        home = CarmenFeature.builder().text("Mapbox SF Office")
+                .geometry(Point.fromLngLat(-122.399854, 37.7884400))
+                .placeName("85 2nd St, San Francisco, CA")
+                .id("mapbox-sf")
+                .properties(new JsonObject())
+                .build();
+
+        work = CarmenFeature.builder().text("Mapbox DC Office")
+                .placeName("740 15th Street NW, Washington DC")
+                .geometry(Point.fromLngLat(-77.0338348, 38.899750))
+                .id("mapbox-dc")
+                .properties(new JsonObject())
+                .build();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE_AUTOCOMPLETE) {
+
+            // Retrieve selected location's CarmenFeature
+            CarmenFeature selectedCarmenFeature = PlaceAutocomplete.getPlace(data);
+
+            // Create a new FeatureCollection and add a new Feature to it using selectedCarmenFeature above
+            FeatureCollection featureCollection = FeatureCollection.fromFeatures(
+                    new Feature[]{Feature.fromJson(selectedCarmenFeature.toJson())});
+
+            // Retrieve and update the source designated for showing a selected location's symbol layer icon
+            GeoJsonSource source = mapboxMap.getSourceAs(geojsonSourceLayerId);
+            if (source != null) {
+                source.setGeoJson(featureCollection);
+            }
+
+            // Move map camera to the selected location
+            CameraPosition newCameraPosition = new CameraPosition.Builder()
+                    .target(new LatLng(((Point) selectedCarmenFeature.geometry()).latitude(),
+                            ((Point) selectedCarmenFeature.geometry()).longitude()))
+                    .zoom(14)
+                    .build();
+            mapboxMap.animateCamera(CameraUpdateFactory.newCameraPosition(newCameraPosition), 4000);
+        }
+    }
+
+    private void setUpSource() {
+        GeoJsonSource geoJsonSource = new GeoJsonSource(geojsonSourceLayerId);
+        mapboxMap.addSource(geoJsonSource);
+    }
+
+    private void setupLayer() {
+        SymbolLayer selectedLocationSymbolLayer = new SymbolLayer("SYMBOL_LAYER_ID", geojsonSourceLayerId);
+        selectedLocationSymbolLayer.withProperties(PropertyFactory.iconImage(symbolIconId));
+        mapboxMap.addLayer(selectedLocationSymbolLayer);
+    }
+
+    /*
     private void addMarkers() {
         List<Feature> features = new ArrayList<>();
-    /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+    // Source: A data source specifies the geographic coordinate where the image marker gets placed. //
+
         features.add(Feature.fromGeometry(Point.fromCoordinates(new double[] {-120.47819020087968,37.3246486998446})));
         FeatureCollection featureCollection = FeatureCollection.fromFeatures(features);
         GeoJsonSource source = new GeoJsonSource(MARKER_SOURCE, featureCollection);
         mapboxMap.addSource(source);
-	/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+	// Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. //
         SymbolLayer markerStyleLayer = new SymbolLayer(MARKER_STYLE_LAYER, MARKER_SOURCE)
                 .withProperties(
                         PropertyFactory.iconAllowOverlap(true),
@@ -242,7 +295,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                 );
         mapboxMap.addLayer(markerStyleLayer);
     }
-
+        */
 
     @Override
     @SuppressWarnings( {"MissingPermission"})
