@@ -21,7 +21,7 @@ public class SearchStopsDialog extends AppCompatDialogFragment {
         View view = inflater.inflate(R.layout.dialog_add_stop, null);
 
         builder.setView(view)
-                .setTitle("Select Type of Stop")
+                .setTitle("New Personalized Schedule By")
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

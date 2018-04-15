@@ -1,42 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mapbox_plugins_bright_blue"
     tools:context="com.vancu.findmytrackalpha1.LoggedInScheduleActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="top"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BottomNav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
 
     <TextView
         android:id="@+id/tStopSchedule"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="193dp"
+        android:layout_marginTop="240dp"
         android:text="No Current Schedules Set!"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="left|center" />
-
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="67dp"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="51dp"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            app:backgroundTint="@android:color/holo_green_dark"
-            app:layout_anchor="@+id/include"
-            app:layout_anchorGravity="top"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
-
-    </android.support.design.widget.AppBarLayout>
+        app:layout_anchorGravity="left|center"
+        app:layout_constraintBottom_toTopOf="@+id/fab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_logged_in_schedule" />
-
-</android.support.design.widget.CoordinatorLayout>
+</android.support.constraint.ConstraintLayout>

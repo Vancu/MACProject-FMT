@@ -197,6 +197,28 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                 .snippet(getString(R.string.draw_marker_options_snippet))
                 .icon(convertedIcon2));
 
+        //Mammoth Lake Rd Stop
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.363253,-120.429428))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Muir Pass Stop
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.365616,-120.426895))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
+
+        //Emigrant Pass Stop
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.363770,-120.430687))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+
         initSearchFab();
         addUserLocations();
 
@@ -223,7 +245,8 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                         .accessToken(Mapbox.getAccessToken())
                         .placeOptions(PlaceOptions.builder()
                                 .backgroundColor(Color.parseColor("#EEEEEE"))
-                                .country(Locale.US)
+                                //.country(Locale)
+                                //.proximity(Point.fromLngLat(lastLocation.getLongitude(),originLocation.getLatitude()))
                                 .proximity(Point.fromLngLat(-120.47819020087968, 37.3246486998446))
                                 .limit(10)
                                 .addInjectedFeature(MStreetStop)
@@ -298,7 +321,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
             CameraPosition newCameraPosition = new CameraPosition.Builder()
                     .target(new LatLng(((Point) selectedCarmenFeature.geometry()).latitude(),
                             ((Point) selectedCarmenFeature.geometry()).longitude()))
-                    .zoom(14)
+                    .zoom(16)
                     .build();
             mapboxMap.animateCamera(CameraUpdateFactory.newCameraPosition(newCameraPosition), 4000);
         }

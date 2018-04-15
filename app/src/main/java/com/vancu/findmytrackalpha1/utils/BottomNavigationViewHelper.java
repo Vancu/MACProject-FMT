@@ -2,6 +2,7 @@ package com.vancu.findmytrackalpha1.utils;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
@@ -11,6 +12,7 @@ import com.vancu.findmytrackalpha1.LoggedInMainMenuActivity;
 import com.vancu.findmytrackalpha1.LoggedInScheduleActivity;
 import com.vancu.findmytrackalpha1.LoggedInSettingsActivity;
 import com.vancu.findmytrackalpha1.LoggedInViewMapActivity;
+import com.vancu.findmytrackalpha1.LoggedInViewSchedule;
 import com.vancu.findmytrackalpha1.R;
 import com.vancu.findmytrackalpha1.SearchStops;
 
@@ -45,7 +47,7 @@ public class BottomNavigationViewHelper {
                         return true;
 
                     case R.id.navigation_schedule:
-                        Intent intent2 = new Intent(context, LoggedInScheduleActivity.class); //ACTIVITY_NUM = 2
+                        Intent intent2 = new Intent(context, LoggedInViewSchedule.class); //ACTIVITY_NUM = 2
                         context.startActivity(intent2);
                         return true;
 

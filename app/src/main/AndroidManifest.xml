@@ -5,10 +5,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- Coarse location -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <!-- Or fine location -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -40,6 +40,7 @@
         <activity
             android:name=".LoggedInSettingsActivity"
             android:label="@string/title_activity_logged_in_settings" />
+        <activity android:name=".LoggedInViewSchedule"></activity>
     </application>
 
 </manifest>
