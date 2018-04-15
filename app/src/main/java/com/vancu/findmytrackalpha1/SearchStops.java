@@ -99,7 +99,7 @@ public class SearchStops extends AppCompatActivity
 
     public void bSearchBusStops(View view)
     {
-        Intent intent = new Intent(this,SearchResultsActivity.class);
+        Intent intent = new Intent(this,ViewSearchResults.class);
         intent.putExtra("BusCompany",BusCompanyString);
         intent.putExtra("BusID",BusIDString);
         startActivity(intent);
