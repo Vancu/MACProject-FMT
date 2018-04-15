@@ -1,5 +1,6 @@
 package com.vancu.findmytrackalpha1;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,6 +44,18 @@ public class LoggedInViewSchedule extends AppCompatActivity {
         Menu menu = BottomNavEx.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+    }
+
+    public void bNewStopScheduleTest(View view)
+    {
+        Intent intent = new Intent(this,NewStopSchedule.class);
+        startActivity(intent);
+    }
+
+    public void bNewCustomScheduleTest(View view)
+    {
+        Intent intent = new Intent(this,NewCustomScheduleActivity.class);
+        startActivity(intent);
     }
 
     public void openDialog()

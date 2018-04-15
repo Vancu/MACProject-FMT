@@ -44,15 +44,14 @@
         android:layout_height="67dp"
         android:layout_marginBottom="260dp"
         android:layout_marginEnd="118dp"
-        android:layout_marginLeft="119dp"
-        android:layout_marginRight="118dp"
         android:layout_marginStart="119dp"
         android:layout_marginTop="21dp"
+        android:onClick="bSearchResultsTest1"
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ranges" />
+        app:layout_constraintTop_toBottomOf="@+id/Ranges" />
 
     <TextView
         android:id="@+id/tStopSchedule"
@@ -91,7 +90,7 @@
         android:layout_marginStart="38dp"
         android:layout_marginTop="14dp"
         android:text="Range (miles)"
-        app:layout_constraintEnd_toStartOf="@+id/ranges"
+        app:layout_constraintEnd_toStartOf="@+id/Ranges"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
 

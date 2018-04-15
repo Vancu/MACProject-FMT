@@ -1,5 +1,6 @@
 package com.vancu.findmytrackalpha1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,5 +35,11 @@ public class NewStopSchedule extends AppCompatActivity
             }
         });
 
+    }
+
+    public void bSearchResultsTest1(View view)
+    {
+        Intent intent = new Intent(this,ViewSearchResults.class);
+        startActivity(intent);
     }
 }

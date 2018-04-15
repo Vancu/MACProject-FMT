@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".SearchStops">
+    tools:context=".LoggedInViewSchedule">
 
     <Button
         android:id="@+id/bSearchStop"
@@ -16,6 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
         android:background="@android:color/holo_blue_light"
+        android:onClick="bNewStopScheduleTest"
         android:text="@string/search_stops"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -30,6 +31,7 @@
         android:layout_below="@+id/bSearchStop"
         android:layout_marginTop="20dp"
         android:background="@android:color/holo_blue_light"
+        android:onClick="bNewCustomScheduleTest"
         android:text="@string/custom_stops"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
