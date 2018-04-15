@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+import android.location.Location;
 
 import com.google.gson.JsonObject;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
@@ -39,6 +40,7 @@ import com.mapbox.services.android.telemetry.location.LocationEngine;
 import com.mapbox.services.android.telemetry.location.LocationEngineListener;
 import com.mapbox.services.android.telemetry.location.LocationEnginePriority;
 import com.mapbox.services.android.telemetry.location.LocationEngineProvider;
+import com.mapbox.services.android.telemetry.location.LostLocationEngine;
 import com.mapbox.services.android.telemetry.permissions.PermissionsManager;
 import com.mapbox.services.android.telemetry.permissions.PermissionsListener;
 import com.mapbox.services.commons.geojson.Feature;
@@ -49,6 +51,8 @@ import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
 import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
 import com.mapbox.api.geocoding.v5.models.CarmenFeature;
 import com.mapbox.geojson.Point;
+
+import java.util.Locale;
 
 public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -70,31 +74,33 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
 
     private CarmenFeature home;
     private CarmenFeature work;
+    private CarmenFeature MStreetStop;
+    private CarmenFeature MCStop;
+    private CarmenFeature MammothLakeRdStop;
+    private CarmenFeature MuirPassStop;
+    private CarmenFeature EmigrantPassStop;
+
     private String geojsonSourceLayerId = "geojsonSourceLayerId";
     private String symbolIconId = "symbolIconId";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logged_in_view_map);
-        setupBottomNavBar();
 
         // Mapbox access token is configured here. This needs to be called either in your application
         // object or in the same activity which contains the mapview.
         Mapbox.getInstance(this, "pk.eyJ1IjoidmFuY3U3NDEiLCJhIjoiY2pmcHJsb2ljMGxhazJ4cW9xZ2ZvN2R5ZSJ9.NstJVDuwKG9XDKQqAx-Jow");
 
+        setContentView(R.layout.activity_logged_in_view_map);
+        setupBottomNavBar();
+
+
 	/* Map: This represents the map in the application. */
         mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this);
-        mapView.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(MapboxMap mapboxMap) {
-                LoggedInViewMapActivity.this.mapboxMap = mapboxMap;
-                enableLocationPlugin();
-            }
-        });
 
+        //Handles showing user location, and putting the stops on the map
+        mapView.getMapAsync(this);
     }
 
     @SuppressWarnings( {"MissingPermission"})
@@ -156,6 +162,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
     //@Override
     public void onLocationChanged(Location location) {
         if (location != null) {
+            originLocation = location;
             setCameraPosition(location);
             locationEngine.removeLocationEngineListener(locationEngineListener);
         }
@@ -164,6 +171,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
     @Override
     public void onMapReady(MapboxMap mapboxMap) {
         LoggedInViewMapActivity.this.mapboxMap = mapboxMap;
+        enableLocationPlugin();
     /* Image: An image is loaded and added to the map. */
         Bitmap icon = BitmapFactory.decodeResource(
                 LoggedInViewMapActivity.this.getResources(), R.drawable.ic_action_name);
@@ -175,12 +183,14 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         Icon convertedIcon = IconFactory.getInstance(LoggedInViewMapActivity.this).fromBitmap(icon);
         Icon convertedIcon2 = IconFactory.getInstance(LoggedInViewMapActivity.this).fromBitmap(icon2);
 
+        //M Street Apts.
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.3246486998446,-120.47819020087968))
                 .title(getString(R.string.draw_marker_options_title))
                 .snippet(getString(R.string.draw_marker_options_snippet))
                 .icon(convertedIcon));
 
+        //Merced College Stop
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.33462266081097,-120.47795600888725))
                 .title(getString(R.string.draw_marker_options_title))
@@ -200,7 +210,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
 
         // Set up a new symbol layer for displaying the searched location's feature coordinates
         //THIS IS FOR WHEN YOU WANT TO ADD A POINT AFTER A USER SEARCHES FOR A LOCATION, CURRENTLY LEFT UNUSED FOR NOW
-        //setupLayer();
+        setupLayer();
 
     }
 
@@ -213,10 +223,16 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                         .accessToken(Mapbox.getAccessToken())
                         .placeOptions(PlaceOptions.builder()
                                 .backgroundColor(Color.parseColor("#EEEEEE"))
+                                .country(Locale.US)
+                                .proximity(Point.fromLngLat(-120.47819020087968, 37.3246486998446))
                                 .limit(10)
-                                .addInjectedFeature(home)
-                                .addInjectedFeature(work)
+                                .addInjectedFeature(MStreetStop)
+                                .addInjectedFeature(MCStop)
+                                .addInjectedFeature(MammothLakeRdStop)
+                                .addInjectedFeature(MuirPassStop)
+                                .addInjectedFeature(EmigrantPassStop)
                                 .build(PlaceOptions.MODE_CARDS))
+
                         .build(LoggedInViewMapActivity.this);
                 startActivityForResult(intent, REQUEST_CODE_AUTOCOMPLETE);
             }
@@ -224,16 +240,37 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
     }
 
     private void addUserLocations() {
-        home = CarmenFeature.builder().text("Mapbox SF Office")
-                .geometry(Point.fromLngLat(-122.399854, 37.7884400))
-                .placeName("85 2nd St, San Francisco, CA")
+        MStreetStop = CarmenFeature.builder().text("M Street Apt. (Northbound)")
+                .geometry(Point.fromLngLat(-120.47819020087968, 37.3246486998446))
+                .placeName("M Street, Merced, CA")
                 .id("mapbox-sf")
                 .properties(new JsonObject())
                 .build();
 
-        work = CarmenFeature.builder().text("Mapbox DC Office")
-                .placeName("740 15th Street NW, Washington DC")
-                .geometry(Point.fromLngLat(-77.0338348, 38.899750))
+        MCStop = CarmenFeature.builder().text("Merced College Bus Stop")
+                .placeName("Merced College The Bus Terminal, Merced, CA")
+                .geometry(Point.fromLngLat(-120.47795600888725, 37.33462266081097))
+                .id("mapbox-dc")
+                .properties(new JsonObject())
+                .build();
+
+        MammothLakeRdStop = CarmenFeature.builder().text("Mammoth Lake Road")
+                .placeName("Scholar's Lane, Merced, CA")
+                .geometry(Point.fromLngLat(-120.429428, 37.363253))
+                .id("mapbox-dc")
+                .properties(new JsonObject())
+                .build();
+
+        MuirPassStop = CarmenFeature.builder().text("Muir Pass (Student Activities and Athletics Center)")
+                .placeName("Muir Pass Road, Merced, CA")
+                .geometry(Point.fromLngLat(-120.426895, 37.365616))
+                .id("mapbox-dc")
+                .properties(new JsonObject())
+                .build();
+
+        EmigrantPassStop = CarmenFeature.builder().text("Merced College Bus Stop")
+                .placeName("Emigrant Pass Road, Merced, CA")
+                .geometry(Point.fromLngLat(-120.430687, 37.363770))
                 .id("mapbox-dc")
                 .properties(new JsonObject())
                 .build();
@@ -301,6 +338,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
     @SuppressWarnings( {"MissingPermission"})
     protected void onStart() {
         super.onStart();
+
         if (locationEngine != null) {
             locationEngine.requestLocationUpdates();
         }
