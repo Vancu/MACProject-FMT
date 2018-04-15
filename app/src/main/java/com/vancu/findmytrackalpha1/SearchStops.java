@@ -19,6 +19,8 @@ public class SearchStops extends AppCompatActivity
     private static final int ACTIVITY_NUM = 3;
     Spinner BusCompany, BusID, Ranges;
 
+    String BusCompanyString, BusIDString;
+
     ArrayAdapter<CharSequence> adapter;
 
     @Override
@@ -48,6 +50,7 @@ public class SearchStops extends AppCompatActivity
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,int position,long id)
             {
+                BusCompanyString = parent.getItemAtPosition(position).toString();
                 if(position == 0)
                 {
                     //sets BusID to cattracks
@@ -71,7 +74,7 @@ public class SearchStops extends AppCompatActivity
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,int position,long id)
             {
-
+                BusIDString = parent.getItemAtPosition(position).toString();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent)
@@ -94,11 +97,21 @@ public class SearchStops extends AppCompatActivity
         });
     }
 
-    public void bNewStopScheduleTest(View view)
+    public void bSearchBusStops(View view)
     {
-        Intent intent = new Intent(this,NewStopSchedule.class);
+        Intent intent = new Intent(this,SearchResultsActivity.class);
+        intent.putExtra("BusCompany",BusCompanyString);
+        intent.putExtra("BusID",BusIDString);
         startActivity(intent);
     }
+
+    /*public void bNewStopScheduleTest(View view)
+    {
+        Intent intent = new Intent(this,NewStopSchedule.class);
+        intent.putExtra("BusCompany",BusCompanyString);
+        intent.putExtra("BusID",BusIDString);
+        startActivity(intent);
+    }*/
 
     public void bNewCustomScheduleTest(View view)
     {
