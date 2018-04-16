@@ -39,54 +39,54 @@
     </string-array>
     <string-array name="TimeDeparture">
         <item>Set Time</item>
-        <item>12:00AM</item>
-        <item>12:30AM</item>
-        <item>1:00AM</item>
-        <item>1:30AM</item>
-        <item>2:00AM</item>
-        <item>2:30AM</item>
-        <item>3:00AM</item>
-        <item>3:30AM</item>
-        <item>4:00AM</item>
-        <item>4:30AM</item>
-        <item>5:00AM</item>
-        <item>5:30AM</item>
-        <item>6:00AM</item>
-        <item>6:30AM</item>
-        <item>7:00AM</item>
-        <item>7:30AM</item>
-        <item>8:00AM</item>
-        <item>8:30AM</item>
-        <item>9:00AM</item>
-        <item>9:30AM</item>
-        <item>10:00AM</item>
-        <item>10:30AM</item>
-        <item>11:00AM</item>
-        <item>11:30AM</item>
-        <item>12:00PM</item>
-        <item>12:30PM</item>
-        <item>1:00PM</item>
-        <item>1:30PM</item>
-        <item>2:00PM</item>
-        <item>2:30PM</item>
-        <item>3:00PM</item>
-        <item>3:30PM</item>
-        <item>4:00PM</item>
-        <item>4:30PM</item>
-        <item>5:00PM</item>
-        <item>5:30PM</item>
-        <item>6:00PM</item>
-        <item>6:30PM</item>
-        <item>7:00PM</item>
-        <item>7:30PM</item>
-        <item>8:00PM</item>
-        <item>8:30PM</item>
-        <item>9:00PM</item>
-        <item>9:30PM</item>
-        <item>10:00PM</item>
-        <item>10:30PM</item>
-        <item>11:00PM</item>
-        <item>11:30PM</item>
+        <item>00:00</item>
+        <item>00:30</item>
+        <item>01:00</item>
+        <item>01:30</item>
+        <item>02:00</item>
+        <item>02:30</item>
+        <item>03:00</item>
+        <item>03:30</item>
+        <item>04:00</item>
+        <item>04:30</item>
+        <item>05:00</item>
+        <item>05:30</item>
+        <item>06:00</item>
+        <item>06:30</item>
+        <item>07:00</item>
+        <item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+        <item>20:00</item>
+        <item>20:30</item>
+        <item>21:00</item>
+        <item>21:30</item>
+        <item>22:00</item>
+        <item>22:30</item>
+        <item>23:00</item>
+        <item>23:30</item>
     </string-array>
 
     <string-array name="RepeatArray">
@@ -198,4 +198,19 @@
     <string name="draw_marker_options_snippet">Bus Company: CatTracks\nBus ID:C2, E, E2 \n\nBus Company: TheBus \nBus ID: L, M3, UC, W2</string>
     <string name="search_in_map">Search</string>
     <string name="user_location_permission_not_granted">Error: User Location Not Granted</string>
+
+    <string name="schedule_notification_title_template">Schedule: %1$s</string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="schedule_notification_placeholder_text_template">You said %1$s and lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel
+        semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis.
+        Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper
+        ornare lacus. Duis ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis
+        viverra rhoncus sit amet nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec
+        tortor.
+    </string>
+
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
 </resources>

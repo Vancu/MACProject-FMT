@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
 
     <ToggleButton
-        android:id="@+id/bFriday"
+        android:id="@+id/bFri"
         android:layout_width="45dp"
         android:layout_height="39dp"
         android:layout_marginTop="58dp"
@@ -53,7 +53,7 @@
         android:textOn="Sat"
         android:textSize="7sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bFriday"
+        app:layout_constraintStart_toEndOf="@+id/bFri"
         app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
 
     <ToggleButton
@@ -65,7 +65,7 @@
         android:textOff="Thur"
         android:textOn="Thur"
         android:textSize="7sp"
-        app:layout_constraintEnd_toStartOf="@+id/bFriday"
+        app:layout_constraintEnd_toStartOf="@+id/bFri"
         app:layout_constraintStart_toEndOf="@+id/bWed"
         app:layout_constraintTop_toBottomOf="@+id/etBusStopAddress" />
 
@@ -143,7 +143,6 @@
         android:layout_marginBottom="52dp"
         android:layout_marginEnd="118dp"
         android:layout_marginStart="119dp"
-        android:onClick="bSearchResultsTest1"
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

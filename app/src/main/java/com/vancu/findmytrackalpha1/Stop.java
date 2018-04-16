@@ -5,7 +5,7 @@ import java.util.Vector;
 public class Stop
 {
     String name;
-    Vector<Time> times;
+    Vector<Time> times = new Vector<>();
 
     public Stop() {
     }

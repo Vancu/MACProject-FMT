@@ -239,7 +239,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                 .snippet(getString(R.string.draw_marker_options_snippet))
                 .icon(convertedIcon));
 
-        //Merced Sun-Star/Staples (Sun Star Sign)
+        //Merced tbSun-Star/Staples (tbSun Star Sign)
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.316207,-120.469580))
                 .title(getString(R.string.draw_marker_options_title))

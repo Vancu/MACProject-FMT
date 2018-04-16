@@ -7,59 +7,6 @@
     android:background="@color/mapbox_plugins_bright_blue"
     tools:context="com.vancu.findmytrackalpha1.LoggedInSettingsActivity">
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="315dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginStart="35dp"
-        android:text="Setting4"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="315dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginStart="35dp"
-        android:text="Setting3"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="315dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginStart="35dp"
-        android:text="Setting2"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="315dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="15dp"
-        android:text="Setting1"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -83,4 +30,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="329dp"
+        android:layout_height="57dp"
+        android:text="Switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="49dp" />
+
 </android.support.constraint.ConstraintLayout>

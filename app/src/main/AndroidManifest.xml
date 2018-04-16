@@ -9,6 +9,7 @@
 
     <!-- Or fine location -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -41,7 +42,7 @@
             android:name=".LoggedInSettingsActivity"
             android:label="@string/title_activity_logged_in_settings" />
         <activity android:name=".LoggedInViewSchedule" />
-        <activity android:name=".ViewSearchResults"></activity>
+
     </application>
 
 </manifest>
