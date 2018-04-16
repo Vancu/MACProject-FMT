@@ -6,103 +6,139 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ded2c66c-5ce7-4a44-93df-3af363e7efeb" name="Default" comment="Search Stops now implements moving to different activity using putExtra, more strings in the spinners">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_0_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_0_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_0_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_framework_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_room_common_1_0_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_room_runtime_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_27_0_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ittianyu_BottomNavigationViewEx_1_2_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_12_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_license_12_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_timber_timber_4_6_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_plugin_locationlayer_0_4_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_plugin_places_0_2_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_sdk_5_5_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_telemetry_2_2_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_java_core_2_2_10_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_java_geojson_2_2_10_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_sdk_core_3_0_0_beta_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_sdk_geojson_3_0_0_beta_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_sdk_services_3_0_0_beta_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_logging_interceptor_3_9_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_3_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_3_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Schedule.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_stat_reply.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_stat_share.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_stat_schedule.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_stat_reply.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_stat_share.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_stat_schedule.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/example_picture.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_stat_reply.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_stat_share.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_stat_schedule.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_stat_schedule.png" />
+    <list default="true" id="259ad697-b399-41e6-8d4e-98e7240d252c" name="Default" comment="data pulling working, stored in Vector&lt;Vector&lt;String&gt;&gt; Data">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_http_legacy_android_26.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_json_json_20171018_jar.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/JSONParser.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_0_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_1_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_framework_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_framework_1_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_room_runtime_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_room_runtime_1_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ittianyu_BottomNavigationViewEx_1_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ittianyu_BottomNavigationViewEx_1_2_4.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_12_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_12_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_license_12_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_license_12_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_timber_timber_4_6_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_timber_timber_4_6_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_plugin_locationlayer_0_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_plugin_locationlayer_0_4_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_plugin_places_0_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_plugin_places_0_2_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_sdk_5_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_sdk_5_5_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_telemetry_2_2_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_telemetry_2_2_10.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_core_common_1_0_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_core_runtime_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_common_1_0_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_extensions_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_0_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_persistence_db_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_persistence_db_framework_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_persistence_room_common_1_0_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_persistence_room_runtime_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_cardview_v7_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_design_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_recyclerview_v7_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_annotations_27_0_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_core_3_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_rules_1_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_runner_1_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_transition_27_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_android_volley_volley_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_github_ittianyu_BottomNavigationViewEx_1_2_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_12_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_license_12_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_12_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_license_12_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_12_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_license_12_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_12_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_license_12_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_jakewharton_timber_timber_4_6_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_mapbox_mapboxsdk_mapbox_android_plugin_locationlayer_0_4_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_mapbox_mapboxsdk_mapbox_android_plugin_places_0_2_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_mapbox_mapboxsdk_mapbox_android_sdk_5_5_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_mapbox_mapboxsdk_mapbox_android_telemetry_2_2_10.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_mapbox_mapboxsdk_mapbox_java_core_2_2_10_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_mapbox_mapboxsdk_mapbox_java_geojson_2_2_10_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_mapbox_mapboxsdk_mapbox_sdk_core_3_0_0_beta_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_mapbox_mapboxsdk_mapbox_sdk_geojson_3_0_0_beta_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_mapbox_mapboxsdk_mapbox_sdk_services_3_0_0_beta_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_javawriter_2_1_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okhttp3_logging_interceptor_3_9_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okhttp3_okhttp_3_10_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_okio_okio_1_14_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_retrofit2_converter_gson_2_3_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_squareup_retrofit2_retrofit_2_3_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_inject_javax_inject_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/net_sf_kxml_kxml2_2_3_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_core_1_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_integration_1_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_library_1_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInViewMapActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInViewMapActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/NewCustomScheduleActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/NewCustomScheduleActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Stop.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Stop.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_settings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_settings.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_custom_schedule.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_custom_schedule.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoginActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/ViewSearchResults.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/ViewSearchResults.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_stops.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_stops.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
@@ -121,211 +157,44 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MACProject-FMT" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MACProject-FMT" type="f1a62948:ProjectNode" />
-                <item name="MACProject-FMT" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MACProject-FMT" type="f1a62948:ProjectNode" />
-                <item name="MACProject-FMT" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MACProject-FMT" type="f1a62948:ProjectNode" />
-                <item name="MACProject-FMT" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
+        <projects_view />
       </state>
     </system>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48006296">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Stop.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Stop.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#199#200#0" expanded="true" />
-                    <element signature="e#231#232#0" expanded="true" />
-                    <element signature="e#262#263#0" expanded="true" />
-                    <element signature="e#289#290#0" expanded="true" />
-                    <element signature="e#329#330#0" expanded="true" />
-                    <element signature="e#361#362#0" expanded="true" />
-                    <element signature="e#398#399#0" expanded="true" />
-                    <element signature="e#429#430#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Schedule.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Schedule.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#215#216#0" expanded="true" />
-                    <element signature="e#247#248#0" expanded="true" />
-                    <element signature="e#278#279#0" expanded="true" />
-                    <element signature="e#305#306#0" expanded="true" />
-                    <element signature="e#345#346#0" expanded="true" />
-                    <element signature="e#377#378#0" expanded="true" />
-                    <element signature="e#414#415#0" expanded="true" />
-                    <element signature="e#445#446#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Time.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Time.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NewCustomScheduleActivity.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/NewCustomScheduleActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="126" column="67" lean-forward="false" selection-start-line="126" selection-start-column="67" selection-end-line="126" selection-end-column="67" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1635#1966#0" expanded="true" />
-                    <element signature="e#1965#1966#0" expanded="true" />
-                    <element signature="e#2010#2341#0" expanded="true" />
-                    <element signature="e#2340#2341#0" expanded="true" />
-                    <element signature="e#2385#2716#0" expanded="true" />
-                    <element signature="e#2715#2716#0" expanded="true" />
-                    <element signature="e#2760#3091#0" expanded="true" />
-                    <element signature="e#3090#3091#0" expanded="true" />
-                    <element signature="e#3136#3469#0" expanded="true" />
-                    <element signature="e#3468#3469#0" expanded="true" />
-                    <element signature="e#3513#3844#0" expanded="true" />
-                    <element signature="e#3843#3844#0" expanded="true" />
-                    <element signature="e#3888#4219#0" expanded="true" />
-                    <element signature="e#4218#4219#0" expanded="true" />
-                    <element signature="e#5567#5905#0" expanded="true" />
-                    <element signature="e#5904#5905#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/build.gradle">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="56" lean-forward="false" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/build.gradle">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="activity_new_custom_schedule.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_new_custom_schedule.xml">
-              <provider editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-              <provider selected="true" editor-type-id="android-designer2">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1054">
-                  <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="layoutResourceFile" />
-        <option value="resourceFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>navigation</find>
-      <find>parent</find>
-      <find>ranges</find>
-      <find>dialog</find>
-      <find>onmap</find>
-      <find>background</find>
-      <find>selec</find>
-      <find>Lost</find>
-      <find>setca</find>
-      <find>point</find>
-      <find>addMar</find>
-    </findStrings>
+    <leaf>
+      <file leaf-file-name="ViewSearchResults.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/ViewSearchResults.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="695">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1486#1502#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
-    <push-targets>
-      <push-target-info target-remote="MAC" target-branch="master" repo="$PROJECT_DIR$" source="master" />
-    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\Andrew Yeh\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\kylan\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -2338,63 +2207,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login_register.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/BottonNavigationViewHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/BottomNavigationViewHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_center_viewpager.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_bottom_navigation_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/add_button.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_search_results.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/SearchStopsDialog.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchStopsDialog.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_add_stop.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_logged_in_schedule.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/navigation.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInScheduleActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_new_stop_schedule.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_schedule.xml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/searchnavigation.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_main_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInSettingsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/utils/BottomNavigationViewHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInMainMenuActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/HttpParse.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoginRegisterActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/RegisterActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_view_map.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInViewMapActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Time.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchStops.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_search_stops.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchResultsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_settings.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Stop.java" />
-        <option value="$PROJECT_DIR$/local.properties" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Schedule.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_new_custom_schedule.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/NewCustomScheduleActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchStops.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-624" />
+    <option name="y" value="78" />
     <option name="width" value="2308" />
-    <option name="height" value="1407" />
+    <option name="height" value="991" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages />
@@ -2410,16 +2235,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="MACProject-FMT" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="MACProject-FMT" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="MACProject-FMT" type="1abcf292:AndroidViewProjectNode" />
@@ -2435,245 +2261,33 @@
             <path>
               <item name="MACProject-FMT" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="findmytrackalpha1" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
               <item name="MACProject-FMT" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="MACProject-FMT" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
-    <property name="device.picker.selection" value="pixel" />
-    <property name="android.profiler.active" value="true" />
-    <property name="VectorAssetImportPath" value="/" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1522635184676" />
-    <property name="android.project.structure.last.selected" value="app" />
-    <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LoginTest2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.vancu.findmytrackalpha1" />
-    </key>
-    <key name="android.template.packageName">
-      <recent name="com.vancu.findmytrackalpha1" />
-    </key>
-    <key name="android.template.parentActivityClass">
-      <recent name="" />
-    </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/app.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/AndroidManifest.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInViewMapActivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInViewSchedule.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/NewCustomScheduleActivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/NewStopSchedule.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchStops.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/activity_new_custom_schedule.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/activity_new_stop_schedule.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/activity_search_stops.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/dialog_add_stop.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/local.properties</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/ViewSearchResults.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/activity_view_search_results.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_0_0_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_0_3_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_0_3.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_1_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_framework_1_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_room_common_1_0_0_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_room_runtime_1_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_27_0_2_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ittianyu_BottomNavigationViewEx_1_2_4.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_12_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_license_12_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_2_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_timber_timber_4_6_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_plugin_locationlayer_0_4_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_plugin_places_0_2_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_sdk_5_5_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_android_telemetry_2_2_10.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_java_core_2_2_10_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_java_geojson_2_2_10_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_sdk_core_3_0_0_beta_3_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_sdk_geojson_3_0_0_beta_3_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_mapbox_mapboxsdk_mapbox_sdk_services_3_0_0_beta_3_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_logging_interceptor_3_9_1_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_3_0_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_3_0_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchResultsActivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/activity_search_results.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.1.0" />
+    <property name="device.picker.selection" value="HT43SWM01390" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2687,7 +2301,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -2697,7 +2311,7 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
@@ -2708,8 +2322,6 @@
       <envs />
       <patterns />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
@@ -2772,36 +2384,6 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="MACProject-FMT [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="FindMyTrackAlpha1" />
-      <envs />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -2822,7 +2404,7 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -2836,97 +2418,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-      </Profilers>
-      <method />
-    </configuration>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="HTML_FILE_NAME" />
@@ -2936,73 +2427,15 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
     </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Android App.app" />
-      <item index="1" class="java.lang.String" itemvalue="Gradle.MACProject-FMT [build]" />
-    </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.MACProject-FMT [build]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -3012,265 +2445,108 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ded2c66c-5ce7-4a44-93df-3af363e7efeb" name="Default" comment="" />
-      <created>1522114513968</created>
+      <changelist id="259ad697-b399-41e6-8d4e-98e7240d252c" name="Default" comment="" />
+      <created>1523914714516</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1522114513968</updated>
+      <updated>1523914714516</updated>
     </task>
-    <task id="LOCAL-00001" summary="Added Bottom Navigator after &quot;login&quot; with appropriate tags. Updated some dependencies for later">
-      <created>1522212875582</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1522212875582</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Temporarily added button to go to WIP UserSchedules page on LoggedInMainMenu.">
-      <created>1522278498743</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1522278498743</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added buttons for main 4 icons when Bottom Navigation works, My Schedule's plus button has pop-up for search or custom stops">
-      <created>1522294342394</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1522294342394</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Bottom Navigation works now. Remove buttons later, get Bottom Nav on all screens">
-      <created>1522622788411</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1522622788411</updated>
-    </task>
-    <task id="LOCAL-00005" summary="This is a test to merge the app into the MAC Repo">
-      <created>1522626481147</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1522626481147</updated>
-    </task>
-    <task id="LOCAL-00006" summary="This is a test to see if updates show up on Github">
-      <created>1522628688529</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1522628688529</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added a logout button on Main Menu, redirected Register button to login screen once user theoretically inputs info for registration">
-      <created>1522707186426</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1522707186428</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Map now shows user's location. database still needs encryption">
-      <created>1523671814208</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1523671814208</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Search Stops now implements moving to different activity using putExtra, more strings in the spinners">
-      <created>1523767385528</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1523767385528</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="2308" height="1407" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32939914" sideWeight="0.49658704" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.49658704" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18991417" sideWeight="0.43189964" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23819743" sideWeight="0.4916368" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.305794" sideWeight="0.48293516" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15228426" sideWeight="0.49317408" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.49658704" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15213524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2004717" sideWeight="0.56810033" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24970132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23655914" sideWeight="0.5021299" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09139785" sideWeight="0.4978701" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32741117" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Bottom Navigator after &quot;login&quot; with appropriate tags. Updated some dependencies for later" />
-    <MESSAGE value="Temporarily added button to go to WIP UserSchedules page on LoggedInMainMenu." />
-    <MESSAGE value="Added buttons for main 4 icons when Bottom Navigation works, My Schedule's plus button has pop-up for search or custom stops" />
-    <MESSAGE value="Bottom Navigation works now. Remove buttons later, get Bottom Nav on all screens" />
-    <MESSAGE value="This is a test to merge the app into the MAC Repo" />
-    <MESSAGE value="This is a test to see if updates show up on Github" />
-    <MESSAGE value="Added a logout button on Main Menu, redirected Register button to login screen once user theoretically inputs info for registration" />
-    <MESSAGE value="added login/register through database, needs encryption" />
-    <MESSAGE value="Map now shows user's location. database still needs encryption" />
-    <MESSAGE value="Search Stops now implements moving to different activity using putExtra, more strings in the spinners" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search Stops now implements moving to different activity using putExtra, more strings in the spinners" />
+    <MESSAGE value="data pulling working, stored in Vector&lt;Vector&lt;String&gt;&gt; Data" />
+    <option name="LAST_COMMIT_MESSAGE" value="data pulling working, stored in Vector&lt;Vector&lt;String&gt;&gt; Data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchStops.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/navigation.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_logged_in_schedule.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/utils/BottomNavigationViewHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_main_menu.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="54" lean-forward="false" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInScheduleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-26/android.jar!/android/view/View.class" />
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-26/android.jar!/android/os/AsyncTask.class" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="44" lean-forward="false" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoginRegisterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/HttpParse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.0.2/4ae031a24f432a35efae0d609731c5a34e65696c/appcompat-v7-27.0.2-sources.jar!/android/support/v7/app/AppCompatViewInflater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="129">
+          <caret line="292" column="0" lean-forward="false" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchStopsDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Time.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="79" />
+        <state relative-caret-position="598">
+          <caret line="44" column="53" lean-forward="false" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -3278,331 +2554,40 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInMainMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="55" column="10" lean-forward="false" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
-          <folding>
-            <element signature="e#927#1863#0" expanded="false" />
-            <element signature="e#1254#1272#0" expanded="false" />
-            <element signature="e#1396#1424#0" expanded="false" />
-            <element signature="e#1605#1625#0" expanded="false" />
-            <element signature="e#1749#1772#0" expanded="false" />
-            <element signature="e#1862#1863#0" expanded="false" />
-            <element signature="e#2462#2612#0" expanded="false" />
-            <element signature="e#2611#2612#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_schedule.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="52" lean-forward="false" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInViewMapActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="201" column="118" lean-forward="false" selection-start-line="201" selection-start-column="118" selection-end-line="201" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_search_results.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_results.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/RegisterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_stops.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="48" lean-forward="false" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchStops.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        <state relative-caret-position="287">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchResultsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SettingsActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/pref_general.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/pref_headers.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/pref_notification.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/pref_data_sync.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/ScheduleServiceIntent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/ScheduleNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_view_map.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_new_stop_schedule.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/NewStopSchedule.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInViewSchedule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_settings.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_logged_in_view_schedule.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/ViewSearchResults.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_register.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/LoggedInSettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/SearchStopsDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="695">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1486#1502#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="56" lean-forward="false" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="199">
+          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Stop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_new_custom_schedule.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vancu/findmytrackalpha1/NewCustomScheduleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="126" column="67" lean-forward="false" selection-start-line="126" selection-start-column="67" selection-end-line="126" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1635#1966#0" expanded="true" />
-            <element signature="e#1965#1966#0" expanded="true" />
-            <element signature="e#2010#2341#0" expanded="true" />
-            <element signature="e#2340#2341#0" expanded="true" />
-            <element signature="e#2385#2716#0" expanded="true" />
-            <element signature="e#2715#2716#0" expanded="true" />
-            <element signature="e#2760#3091#0" expanded="true" />
-            <element signature="e#3090#3091#0" expanded="true" />
-            <element signature="e#3136#3469#0" expanded="true" />
-            <element signature="e#3468#3469#0" expanded="true" />
-            <element signature="e#3513#3844#0" expanded="true" />
-            <element signature="e#3843#3844#0" expanded="true" />
-            <element signature="e#3888#4219#0" expanded="true" />
-            <element signature="e#4218#4219#0" expanded="true" />
-            <element signature="e#5567#5905#0" expanded="true" />
-            <element signature="e#5904#5905#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

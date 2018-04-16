@@ -17,7 +17,6 @@ import java.util.HashMap;
 public class LoginActivity extends AppCompatActivity {
 
     EditText Email, Password;
-    Button LogIn ;
     String PasswordHolder, EmailHolder;
     String finalResult ;
     String HttpURL = "http://73.220.191.198:13379/UserLogin.php";
