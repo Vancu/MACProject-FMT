@@ -183,6 +183,160 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         Icon convertedIcon = IconFactory.getInstance(LoggedInViewMapActivity.this).fromBitmap(icon);
         Icon convertedIcon2 = IconFactory.getInstance(LoggedInViewMapActivity.this).fromBitmap(icon2);
 
+        //Mammoth Lake Rd Stop
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.363253,-120.429428))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Muir Pass Stop
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.365616,-120.426705))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
+
+        //Emigrant Pass Stop
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.363770,-120.430687))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Castle Air Park.
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.374616,-120.576773))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Mercy Hospital/Tri-college.
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.339273,-120.468734))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Tri-College/Mercy. (actual stop is Tri-college)
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.335907,-120.469218))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //El Portal Plaza & "G" Street (bus stop on "G")
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.327082,-120.469025))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Rite Aid/Walgreens
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.324979,-120.468982))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Merced Sun-Star/Staples (Sun Star Sign)
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.316207,-120.469580))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Alexander & "G" Street (bus stop on "G")
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.315815,-120.469213))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Swiss Colony Apts.
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.318274,-120.474071))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //College Green on Park @ 3040 Park Ave
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.318133,-120.473114))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Meadows Ave & Olivewood Dr. (Food Maxx) (ACTUALL STREET IS OLIVEWOOD
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.318235,-120.490786))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Meadows Ave & Olivewood Dr. (Food Maxx) (ACTUAL STREET IS MEADOWS AVE.
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.318112,-120.490558))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Walmart on Loughborough at "Pier One" bus stop
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.317600,-120.499436))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Walmart on Loughborough across "Pier One"
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.317391,-120.499568))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Granville Luxury Apartments
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.315275,-120.502951))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Ironstone Dr.
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.342663,-120.477819))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //"R" Street Village Apts.
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.335605,-120.486243))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //El Redondo @ corner of Jenner before traffic circle
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.334307,-120.495182))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Buena Vista
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.326230,-120.502370))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
+        //Merced Mall / Target
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.323377,-120.485577))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon));
+
         //M Street Apts.
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.3246486998446,-120.47819020087968))
@@ -197,26 +351,75 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                 .snippet(getString(R.string.draw_marker_options_snippet))
                 .icon(convertedIcon2));
 
-        //Mammoth Lake Rd Stop
+        //In-Shape
         mapboxMap.addMarker(new MarkerOptions()
-                .position(new LatLng(37.363253,-120.429428))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
-                .icon(convertedIcon));
-
-        //Muir Pass Stop
-        mapboxMap.addMarker(new MarkerOptions()
-                .position(new LatLng(37.365616,-120.426895))
+                .position(new LatLng(37.332007,-120.465768))
                 .title(getString(R.string.draw_marker_options_title))
                 .snippet(getString(R.string.draw_marker_options_snippet))
                 .icon(convertedIcon2));
 
-        //Emigrant Pass Stop
+        //University Surgery Center (westbound)
         mapboxMap.addMarker(new MarkerOptions()
-                .position(new LatLng(37.363770,-120.430687))
+                .position(new LatLng(37.332346,-120.451474))
                 .title(getString(R.string.draw_marker_options_title))
                 .snippet(getString(R.string.draw_marker_options_snippet))
-                .icon(convertedIcon));
+                .icon(convertedIcon2));
+
+        //University Surgery Center (eastbound)
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.332081,-120.451704))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
+
+        //Starbucks/Promenade Center
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.332208,-120.460500))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
+
+        //Moraga Subdivision (westbound)
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.332342,-120.438691))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
+
+        //Moraga Subdivision (eastbound)
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.332047,-120.437723))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
+
+        //Merced Mall Theater
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.320153,-120.480135))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
+
+        //Applebee's
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.318383,-120.497348))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
+
+        //Hollywood Theatres Mainplace
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.320153,-120.480135))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
+
+        //Amtrak
+        mapboxMap.addMarker(new MarkerOptions()
+                .position(new LatLng(37.307610,-120.477389))
+                .title(getString(R.string.draw_marker_options_title))
+                .snippet(getString(R.string.draw_marker_options_snippet))
+                .icon(convertedIcon2));
 
 
         initSearchFab();
