@@ -1,11 +1,16 @@
 package com.vancu.findmytrackalpha1;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,6 +22,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Vector;
 
 import org.apache.http.NameValuePair;
@@ -53,6 +59,7 @@ public class ViewSearchResults extends AppCompatActivity {
     String TAG_NAME = "stops";
 
     JSONArray stops = null;
+    private ListView lvStops;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,8 +118,62 @@ public class ViewSearchResults extends AppCompatActivity {
             default:
                 break;
         }
-
         LoadFunction(BusID);
+
+        try {
+            Thread.sleep(250);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        lvStops = (ListView) findViewById(R.id.lvStops);
+
+        // Instanciating an array list (you don't need to do this,
+        // you already have yours).
+        final ArrayList<String> your_array_list = new ArrayList<String>();
+        Vector<String> currVec = new Vector<String>();
+        String name;
+        for(int i = 0; i < Data.size(); i++)
+        {
+            currVec = Data.get(i);
+            name = currVec.get(0);
+            your_array_list.add(name);
+
+        }
+
+        // This is the array adapter, it takes the context of the activity as a
+        // first parameter, the type of list view as a second parameter and your
+        // array as a third parameter.
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                your_array_list );
+
+        lvStops.setAdapter(arrayAdapter);
+
+        lvStops.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent ViewTimeStop = new Intent (ViewSearchResults.this, ViewTimeSearchResults.class);
+
+                ArrayList<String> TimeStops = new ArrayList<String>();
+                Vector<String> currVec = new Vector<String>();
+                String stoptime;
+                for (int i = 1; i < Data.get(position).size(); i++)
+                {
+                    currVec = Data.get(position);
+                    stoptime = currVec.get(i);
+                    System.out.print(stoptime);
+                    //Objects.equals("11:59:59", stoptime);
+                    if (!stoptime.equals("11:59:59") && !stoptime.equals("23:59:59"))
+                        TimeStops.add(stoptime);
+                }
+                ViewTimeStop.putExtra("test", TimeStops);
+                startActivity(ViewTimeStop);
+            }
+        });
+
     }
 
     public void LoadFunction(final String BusID) {
@@ -166,4 +227,5 @@ public class ViewSearchResults extends AppCompatActivity {
         LoadAllData loadData = new LoadAllData();
         loadData.execute(BusID);
     }
+
 }

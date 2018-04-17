@@ -42,8 +42,8 @@
             android:name=".LoggedInSettingsActivity"
             android:label="@string/title_activity_logged_in_settings" />
         <activity android:name=".LoggedInViewSchedule" />
-        <activity android:name=".ViewSearchResults"/>
-
+        <activity android:name=".ViewSearchResults" />
+        <activity android:name=".ViewTimeSearchResults"></activity>
     </application>
 
 </manifest>

@@ -171,6 +171,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
     @Override
     public void onMapReady(MapboxMap mapboxMap) {
         LoggedInViewMapActivity.this.mapboxMap = mapboxMap;
+
         enableLocationPlugin();
     /* Image: An image is loaded and added to the map. */
         Bitmap icon = BitmapFactory.decodeResource(
@@ -435,7 +436,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
 
         // Set up a new symbol layer for displaying the searched location's feature coordinates
         //THIS IS FOR WHEN YOU WANT TO ADD A POINT AFTER A USER SEARCHES FOR A LOCATION, CURRENTLY LEFT UNUSED FOR NOW
-        setupLayer();
+        //setupLayer();
 
     }
 
