@@ -7,10 +7,35 @@
     tools:context=".NewStopSchedule">
 
     <Spinner
+        android:id="@+id/ampmSpinner"
+        android:layout_width="95dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/minuteSpinner"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <Spinner
+        android:id="@+id/minuteSpinner"
+        android:layout_width="95dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/ampmSpinner"
+        app:layout_constraintStart_toEndOf="@+id/hourSpinner"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <Spinner
         android:id="@+id/RepeatSpinner"
         android:layout_width="349dp"
         android:layout_height="27dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="9dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,7 +168,7 @@
         android:layout_marginBottom="52dp"
         android:layout_marginEnd="118dp"
         android:layout_marginStart="119dp"
-        android:text="Search"
+        android:text="Create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -172,11 +197,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="304dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="14dp"
         android:text="Repeat:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TimeDepatureSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/hourSpinner" />
 
     <TextView
         android:id="@+id/tDays"
@@ -207,13 +232,15 @@
         app:layout_constraintTop_toBottomOf="@+id/tDays" />
 
     <Spinner
-        android:id="@+id/TimeDepatureSpinner"
-        android:layout_width="349dp"
-        android:layout_height="26dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/hourSpinner"
+        android:layout_width="95dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/minuteSpinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tTimeDeparture" />
 

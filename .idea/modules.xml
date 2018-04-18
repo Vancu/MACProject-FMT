@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MACProject-FMT.iml" filepath="$PROJECT_DIR$/MACProject-FMT.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/MACProject-FMT.iml" filepath="$PROJECT_DIR$/.idea/MACProject-FMT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -14,11 +14,12 @@ import android.widget.CompoundButton;
 
 public class NewCustomScheduleActivity extends AppCompatActivity {
 
-    boolean boolSun, boolMon, boolTue, boolWed, boolThur, boolFri, boolSat;
-    Spinner spinTimeDeparture, spinRepeat;
+    boolean boolSun, boolMon, boolTue, boolWed, boolThur, boolFri, boolSat, PM;
+    Spinner spinHour, spinMinute, spinRepeat, spinAMPM;
     EditText etNameForSchedule, etBusStopAddress;
     Button bSearch;
     ToggleButton tbSun, tbMon, tbTue, tbWed, tbThur, tbFri, tbSat;
+    int min, hour;
 
     ArrayAdapter<CharSequence> adapter;
 
@@ -124,14 +125,52 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
             }
         });
 
-        spinTimeDeparture = findViewById(R.id.TimeDepatureSpinner);
-        adapter = ArrayAdapter.createFromResource(this,R.array.TimeDeparture,android.R.layout.simple_spinner_item);
+        spinHour = findViewById(R.id.hourSpinner);
+        adapter = ArrayAdapter.createFromResource(this,R.array.hours,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinTimeDeparture.setAdapter(adapter);
-        spinTimeDeparture.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinHour.setAdapter(adapter);
+        spinHour.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                hour = Integer.parseInt(adapterView.getItemAtPosition(i).toString());
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        spinMinute = findViewById(R.id.minuteSpinner);
+        adapter = ArrayAdapter.createFromResource(this,R.array.minutes,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinHour.setAdapter(adapter);
+        spinHour.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                min = Integer.parseInt(adapterView.getItemAtPosition(i).toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        spinAMPM = findViewById(R.id.ampmSpinner);
+        adapter = ArrayAdapter.createFromResource(this,R.array.AMPM,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinHour.setAdapter(adapter);
+        spinHour.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if(adapterView.getItemAtPosition(i).toString() == "PM") {
+                    PM = true;
+                }
+                else
+                {
+                    PM = false;
+                }
             }
 
             @Override
@@ -162,6 +201,14 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
                 Schedule tempSchedule = new Schedule(etNameForSchedule.getText().toString());
                 Stop tempStop = new Stop(etBusStopAddress.getText().toString());
                 Time tempTime = new Time();
+                if(PM)
+                {
+                    hour += 12;
+                }
+                tempTime.setHour(hour);
+                tempTime.setMinute(min);
+                tempStop.addTime(tempTime);
+                tempSchedule.addStop(tempStop);
             }
         });
     }
