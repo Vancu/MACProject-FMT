@@ -191,7 +191,6 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
 
