@@ -144,8 +144,8 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
         spinMinute = findViewById(R.id.minuteSpinner);
         adapter = ArrayAdapter.createFromResource(this,R.array.minutes,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinHour.setAdapter(adapter);
-        spinHour.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinMinute.setAdapter(adapter);
+        spinMinute.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 min = Integer.parseInt(adapterView.getItemAtPosition(i).toString());
@@ -160,8 +160,8 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
         spinAMPM = findViewById(R.id.ampmSpinner);
         adapter = ArrayAdapter.createFromResource(this,R.array.AMPM,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinHour.setAdapter(adapter);
-        spinHour.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinAMPM.setAdapter(adapter);
+        spinAMPM.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if(adapterView.getItemAtPosition(i).toString() == "PM") {
