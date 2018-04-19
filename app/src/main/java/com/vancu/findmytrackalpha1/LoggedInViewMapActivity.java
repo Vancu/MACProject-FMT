@@ -187,239 +187,239 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         //Mammoth Lake Rd Stop
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.363253,-120.429428))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Mammoth Lake Road")
+                .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon));
 
         //Muir Pass Stop
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.365616,-120.426705))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Muir Pass/Students Activity Center")
+                .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon2));
 
         //Emigrant Pass Stop
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.363770,-120.430687))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Emigrant Pass")
+                .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon));
 
         //Castle Air Park.
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.374616,-120.576773))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Castle Air Park")
+                .snippet("Bus Company: CatTracks\nBus ID:A-B, ,   ")
                 .icon(convertedIcon));
 
         //Mercy Hospital/Tri-college.
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.339273,-120.468734))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Mercy Hospital")
+                .snippet("Bus Company: CatTracks\nBus ID: C1,  FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon));
 
         //Tri-College/Mercy. (actual stop is Tri-college)
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.335907,-120.469218))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Tri-College")
+                .snippet("Bus Company: CatTracks\nBus ID: C1,  FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon));
 
         //El Portal Plaza & "G" Street (bus stop on "G")
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.327082,-120.469025))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("El Portal Plaza &  Street (bus stop on 'G'')")
+                .snippet("Bus Company: CatTracks\nBus ID: C1, NiteCat, ")
                 .icon(convertedIcon));
 
         //Rite Aid/Walgreens
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.324979,-120.468982))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Rite Aid/Walgreens")
+                .snippet("Bus Company: CatTracks\nBus ID: C1, NiteCat, E, E1, ")
                 .icon(convertedIcon));
 
         //Merced tbSun-Star/Staples (tbSun Star Sign)
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.316207,-120.469580))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Merced Sun Star Sign")
+                .snippet("Bus Company: CatTracks\nBus ID: C1")
                 .icon(convertedIcon));
 
         //Alexander & "G" Street (bus stop on "G")
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.315815,-120.469213))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Alexander & G Street (bus stop on G)")
+                .snippet("Bus Company: CatTracks\nBus ID: C1")
                 .icon(convertedIcon));
 
         //Swiss Colony Apts.
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.318274,-120.474071))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Swiss Colony Apts.")
+                .snippet("Bus Company: CatTracks\nBus ID: C1")
                 .icon(convertedIcon));
 
         //College Green on Park @ 3040 Park Ave
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.318133,-120.473114))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("College Green on Park @ 3040 Park Ave")
+                .snippet("Bus Company: CatTracks\nBus ID: C1")
                 .icon(convertedIcon));
 
-        //Meadows Ave & Olivewood Dr. (Food Maxx) (ACTUALL STREET IS OLIVEWOOD
+        //Meadows Ave & Olivewood Dr. (Food Maxx) (ACTUALL STREET IS OLIVEWOOD)
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.318235,-120.490786))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Olivewood Dr. (Food Maxx, Southbound)")
+                .snippet("Bus Company: CatTracks\nBus ID: C1, E,")
                 .icon(convertedIcon));
 
         //Meadows Ave & Olivewood Dr. (Food Maxx) (ACTUAL STREET IS MEADOWS AVE.
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.318112,-120.490558))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Meadows Ave (Food Maxx, Northbound)")
+                .snippet("Bus Company: CatTracks\nBus ID: C1, E1")
                 .icon(convertedIcon));
 
         //Walmart on Loughborough at "Pier One" bus stop
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.317600,-120.499436))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Walmart on Loughborough at Pier One bus stop")
+                .snippet("Bus Company: CatTracks\nBus ID: C1")
                 .icon(convertedIcon));
 
         //Walmart on Loughborough across "Pier One"
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.317391,-120.499568))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Walmart on Loughborough accross Pier One bus stop")
+                .snippet("Bus Company: CatTracks\nBus ID: C1, E1")
                 .icon(convertedIcon));
 
         //Granville Luxury Apartments
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.315275,-120.502951))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Granville Luxury Apartments")
+                .snippet("Bus Company: CatTracks\nBus ID: C1, E, E1")
                 .icon(convertedIcon));
 
         //Ironstone Dr.
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.342663,-120.477819))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Ironstone Dr.")
+                .snippet("Bus Company: CatTracks\nBus ID: C2, E, E2, G")
                 .icon(convertedIcon));
 
         //"R" Street Village Apts.
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.335605,-120.486243))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("R Street Village Apts.")
+                .snippet("Bus Company: CatTracks\nBus ID: C2, NiteCat, E, E2, G, Heritage ")
                 .icon(convertedIcon));
 
         //El Redondo @ corner of Jenner before traffic circle
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.334307,-120.495182))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("El Redondo @ corner of Jenner before traffic circle")
+                .snippet("Bus Company: CatTracks\nBus ID: C2, E, E2, G")
                 .icon(convertedIcon));
 
         //Buena Vista
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.326230,-120.502370))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Buena Vista")
+                .snippet("Bus Company: CatTracks\nBus ID: C2, E, E2, ")
                 .icon(convertedIcon));
 
         //Merced Mall / Target
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.323377,-120.485577))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Merced Mall/Target")
+                .snippet("Bus Company: CatTracks\nBus ID: C2, E, E1, E2")
                 .icon(convertedIcon));
 
         //M Street Apts.
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.3246486998446,-120.47819020087968))
-                .title(getString(R.string.draw_marker_options_title))
+                .title("M Street Apts.")
                 .snippet(getString(R.string.draw_marker_options_snippet))
                 .icon(convertedIcon));
 
         //Merced College Stop
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.33462266081097,-120.47795600888725))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Merced College Stop")
+                .snippet("Bus Company: CatTracks\nBus ID: A-B, C2, E, E1, E2, G, \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon2));
 
         //In-Shape
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.332007,-120.465768))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("In-Shape")
+                .snippet("Bus Company: CatTracks\nBus ID:  FastCat, E, E1, Heritage ")
                 .icon(convertedIcon2));
 
         //University Surgery Center (westbound)
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.332346,-120.451474))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("University Surgery Center (westbound)")
+                .snippet("Bus Company: CatTracks\nBus ID: FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon2));
 
         //University Surgery Center (eastbound)
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.332081,-120.451704))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("University Surgery Center (eastbound)")
+                .snippet("Bus Company: CatTracks\nBus ID: FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon2));
 
         //Starbucks/Promenade Center
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.332208,-120.460500))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Starbucks/Promenade Center")
+                .snippet("Bus Company: CatTracks\nBus ID: FastCat, E, E1, E2, \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon2));
 
         //Moraga Subdivision (westbound)
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.332342,-120.438691))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Moraga Subdivision (westbound)")
+                .snippet("Bus Company: CatTracks\nBus ID: FastCat, E, E1, E2, \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon2));
 
         //Moraga Subdivision (eastbound)
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.332047,-120.437723))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Moraga Subdivision (eastbound)")
+                .snippet("Bus Company: CatTracks\nBus ID: FastCat, E, E1, E2, \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon2));
 
         //Merced Mall Theater
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.320153,-120.480135))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Merced Mall Theater")
+                .snippet("Bus Company: CatTracks\nBus ID: NiteCat, E, E1, ")
                 .icon(convertedIcon2));
 
         //Applebee's
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.318383,-120.497348))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Applebee's")
+                .snippet("Bus Company: CatTracks\nBus ID: NiteCat, ")
                 .icon(convertedIcon2));
 
         //Hollywood Theatres Mainplace
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.320153,-120.480135))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Hollywood Theatres Mainplace")
+                .snippet("Bus Company: CatTracks\nBus ID: NiteCat, E, E1, G \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon2));
 
         //Amtrak
         mapboxMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.307610,-120.477389))
-                .title(getString(R.string.draw_marker_options_title))
-                .snippet(getString(R.string.draw_marker_options_snippet))
+                .title("Amtrak")
+                .snippet("Bus Company: CatTracks\nBus ID: E, E1, G, \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon2));
 
 

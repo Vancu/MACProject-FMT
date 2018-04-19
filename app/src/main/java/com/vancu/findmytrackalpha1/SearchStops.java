@@ -41,10 +41,12 @@ public class SearchStops extends AppCompatActivity
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         BusID.setAdapter(adapter);
 
+        /*
         Ranges = (Spinner) findViewById(R.id.Ranges);
         adapter = ArrayAdapter.createFromResource(this,R.array.MileRanges,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         Ranges.setAdapter(adapter);
+        */
 
         BusCompany.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -82,6 +84,7 @@ public class SearchStops extends AppCompatActivity
 
             }
         });
+        /*
         Ranges.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
@@ -95,6 +98,7 @@ public class SearchStops extends AppCompatActivity
 
             }
         });
+        */
     }
 
     public void bSearchBusStops(View view)

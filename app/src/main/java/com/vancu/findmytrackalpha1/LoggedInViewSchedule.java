@@ -93,7 +93,7 @@ public class LoggedInViewSchedule extends AppCompatActivity {
 
     public void bNewStopScheduleTest(View view)
     {
-        Intent intent = new Intent(this,NewStopSchedule.class);
+        Intent intent = new Intent(this,SearchStops.class);
         startActivity(intent);
     }
 
