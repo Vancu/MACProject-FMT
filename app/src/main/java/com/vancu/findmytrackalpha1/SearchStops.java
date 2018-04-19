@@ -19,7 +19,7 @@ public class SearchStops extends AppCompatActivity
     private static final int ACTIVITY_NUM = 3;
     Spinner BusCompany, BusID, Ranges;
 
-    String BusCompanyString, BusIDString;
+    String BusCompanyString, BusIDString, scheduleName;
 
     ArrayAdapter<CharSequence> adapter;
 
@@ -31,6 +31,7 @@ public class SearchStops extends AppCompatActivity
 
         setupBottomNavBar();
 
+        //scheduleName = getIntent().getExtras().getString("schedule");
         BusCompany = (Spinner) findViewById(R.id.busCompanyspinner);
         adapter = ArrayAdapter.createFromResource(this,R.array.busCompanyarray,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

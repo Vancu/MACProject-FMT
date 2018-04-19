@@ -1,40 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".LoggedInViewSchedule">
+    tools:context=".LoggedInViewSchedule"
+    android:id="@+id/relativeLayout">
 
     <Button
         android:id="@+id/bSearchStop"
         android:layout_width="328dp"
         android:layout_height="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="29dp"
         android:background="@android:color/holo_blue_light"
         android:onClick="bNewStopScheduleTest"
         android:text="@string/search_stops"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleInput" />
 
     <Button
         android:id="@+id/bCustomStop"
         android:layout_width="329dp"
         android:layout_height="47dp"
-        android:layout_alignLeft="@+id/bSearchStop"
-        android:layout_alignStart="@+id/bSearchStop"
-        android:layout_below="@+id/bSearchStop"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@android:color/holo_blue_light"
         android:onClick="bNewCustomScheduleTest"
         android:text="@string/custom_stops"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bSearchStop" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/scheduleInput"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="90dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Name of Schedule"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

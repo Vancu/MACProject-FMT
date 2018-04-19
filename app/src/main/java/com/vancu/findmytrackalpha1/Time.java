@@ -6,6 +6,7 @@ public class Time implements Serializable
 {
     int hour;
     int minute;
+    String stringTime;
 
     public Time() {
         hour = 0;
@@ -36,5 +37,7 @@ public class Time implements Serializable
     public void setMinute(int minute) {
         this.minute = minute;
     }
+
+    public void setStringTime(String stringTime) { this.stringTime = stringTime;   }
 
 }

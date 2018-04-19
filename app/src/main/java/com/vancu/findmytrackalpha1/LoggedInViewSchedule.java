@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import java.io.*;
 import java.util.ArrayList;
+import android.widget.EditText;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
@@ -23,6 +24,48 @@ public class LoggedInViewSchedule extends AppCompatActivity {
     ListView lvCustomSchedules;
     ArrayList<Schedule> list = new ArrayList<>();
     ArrayList<String> listshow = new ArrayList<>();
+    String scheduleName;
+
+
+    /*protected void writeObjectFile() {
+        File file = new File(this.getFilesDir(), "customScheduleList.ser");
+        try {
+//            FileOutputStream fos = new FileOutputStream("customScheduleList.ser");
+            FileOutputStream fos = openFileOutput("customScheduleList.ser", this.MODE_PRIVATE);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(list);
+            oos.close();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected void readObjectFile(Schedule temp){
+        try {
+            // see if file exists
+            FileInputStream fis = openFileInput("customScheduleList.ser");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            // add schedule to list if exists
+            list = (ArrayList<Schedule>)ois.readObject();
+            list.add(temp);
+            writeObjectFile();
+            ois.close();
+        }
+        catch (FileNotFoundException e) {
+            writeObjectFile();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }*/
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +84,8 @@ public class LoggedInViewSchedule extends AppCompatActivity {
 
             }
         });
+
+        //findViewById(R.id.scheduleInput);
 
         try {
             FileInputStream fis = openFileInput("customScheduleList.ser");
@@ -62,7 +107,7 @@ public class LoggedInViewSchedule extends AppCompatActivity {
         {
             for(int j = 0; j < list.get(i).stops.size(); j++)
             {
-                listshow.add(list.get(i).stops.get(j).name);
+                listshow.add(list.get(i).name);
             }
         }
 
@@ -73,9 +118,14 @@ public class LoggedInViewSchedule extends AppCompatActivity {
         lvCustomSchedules.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Intent intent = new Intent(LoggedInViewSchedule.this,ViewCustomScheduleStops.class);
+                intent.putExtra("pos", position);
+                startActivity(intent);
             }
         });
+
+
+
 
 
     }
@@ -93,7 +143,9 @@ public class LoggedInViewSchedule extends AppCompatActivity {
 
     public void bNewStopScheduleTest(View view)
     {
-        Intent intent = new Intent(this,SearchStops.class);
+        Intent intent = new Intent(LoggedInViewSchedule.this,SearchStops.class);
+        Schedule temp = new Schedule();
+        //temp.setName();
         startActivity(intent);
     }
 

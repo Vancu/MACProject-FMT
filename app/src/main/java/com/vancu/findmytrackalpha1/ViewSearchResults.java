@@ -170,6 +170,7 @@ public class ViewSearchResults extends AppCompatActivity {
                         TimeStops.add(stoptime);
                 }
                 ViewTimeStop.putExtra("test", TimeStops);
+                ViewTimeStop.putExtra("nameofStop", parent.getItemAtPosition(position).toString());
                 startActivity(ViewTimeStop);
             }
         });

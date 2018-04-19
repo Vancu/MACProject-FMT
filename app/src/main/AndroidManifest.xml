@@ -3,10 +3,8 @@
     package="com.vancu.findmytrackalpha1">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
 
     <!-- Coarse location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -47,7 +45,11 @@
             android:label="@string/title_activity_logged_in_settings" />
         <activity android:name=".LoggedInViewSchedule" />
         <activity android:name=".ViewSearchResults" />
-        <activity android:name=".ViewTimeSearchResults"></activity>
+        <activity android:name=".ViewTimeSearchResults" />
+        <activity
+            android:name=".ViewCustomScheduleStops"
+            android:label="@string/title_activity_view_custom_schedule_stops"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>
