@@ -1,10 +1,11 @@
 package com.vancu.findmytrackalpha1;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Schedule {
+public class Schedule implements Serializable {
     String name;
-    Vector<Stop> stops = new Vector<Stop>();
+    ArrayList<Stop> stops = new ArrayList<>();
 
     public Schedule() {
     }

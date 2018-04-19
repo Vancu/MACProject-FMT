@@ -8,6 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import java.io.*;
+import java.util.ArrayList;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
@@ -15,6 +20,9 @@ import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
 public class LoggedInViewSchedule extends AppCompatActivity {
 
     private static final int ACTIVITY_NUM = 2;
+    ListView lvCustomSchedules;
+    ArrayList<Schedule> list = new ArrayList<>();
+    ArrayList<String> listshow = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +41,43 @@ public class LoggedInViewSchedule extends AppCompatActivity {
 
             }
         });
+
+        try {
+            FileInputStream fis = openFileInput("customScheduleList.ser");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            list = (ArrayList<Schedule>)ois.readObject();
+            ois.close();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        for(int i = 0; i < list.size(); i++)
+        {
+            for(int j = 0; j < list.get(i).stops.size(); j++)
+            {
+                listshow.add(list.get(i).stops.get(j).name);
+            }
+        }
+
+        lvCustomSchedules = findViewById(R.id.lvCustomSchedules);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listshow);
+        lvCustomSchedules.setAdapter(arrayAdapter);
+
+        lvCustomSchedules.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
+
+
     }
 
     //sets up the bottom navigation view for current activitiy.

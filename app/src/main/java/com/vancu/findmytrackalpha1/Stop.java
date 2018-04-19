@@ -1,11 +1,12 @@
 package com.vancu.findmytrackalpha1;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Stop
+public class Stop implements Serializable
 {
     String name;
-    Vector<Time> times = new Vector<>();
+    ArrayList<Time> times = new ArrayList<>();
 
     public Stop() {
     }

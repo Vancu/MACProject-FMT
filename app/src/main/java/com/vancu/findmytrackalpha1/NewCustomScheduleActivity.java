@@ -11,17 +11,68 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.ToggleButton;
 import android.widget.CompoundButton;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.io.File;
 
 public class NewCustomScheduleActivity extends AppCompatActivity {
 
+    String hello;
     boolean boolSun, boolMon, boolTue, boolWed, boolThur, boolFri, boolSat, PM;
     Spinner spinHour, spinMinute, spinRepeat, spinAMPM;
     EditText etNameForSchedule, etBusStopAddress;
     Button bSearch;
     ToggleButton tbSun, tbMon, tbTue, tbWed, tbThur, tbFri, tbSat;
     int min, hour;
+    ArrayList<Schedule> list = new ArrayList<>();
 
     ArrayAdapter<CharSequence> adapter;
+
+    protected void writeObjectFile() {
+        File file = new File(this.getFilesDir(), "customScheduleList.ser");
+        try {
+//            FileOutputStream fos = new FileOutputStream("customScheduleList.ser");
+            FileOutputStream fos = openFileOutput("customScheduleList.ser", this.MODE_PRIVATE);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(list);
+            oos.close();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected void readObjectFile(Schedule temp){
+        try {
+            // see if file exists
+            FileInputStream fis = openFileInput("customScheduleList.ser");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            // add schedule to list if exists
+            list = (ArrayList<Schedule>)ois.readObject();
+            list.add(temp);
+            writeObjectFile();
+            ois.close();
+        }
+        catch (FileNotFoundException e) {
+            writeObjectFile();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -193,28 +244,21 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
-
-        bSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Schedule tempSchedule = new Schedule(etNameForSchedule.getText().toString());
-                Stop tempStop = new Stop(etBusStopAddress.getText().toString());
-                Time tempTime = new Time();
-                if(PM)
-                {
-                    hour += 12;
-                }
-                tempTime.setHour(hour);
-                tempTime.setMinute(min);
-                tempStop.addTime(tempTime);
-                tempSchedule.addStop(tempStop);
-            }
-        });
     }
 
-    public void bSearchResultsTest1(View view)
-    {
-        Intent intent = new Intent(this,ViewSearchResults.class);
-        startActivity(intent);
+    public void bCreate(View view) {
+        Schedule tempSchedule = new Schedule(etNameForSchedule.getText().toString());
+        Stop tempStop = new Stop(etBusStopAddress.getText().toString());
+        Time tempTime = new Time();
+        if(PM)
+        {
+            hour += 12;
+        }
+        tempTime.setHour(hour);
+        tempTime.setMinute(min);
+        tempStop.addTime(tempTime);
+        tempSchedule.addStop(tempStop);
+        readObjectFile(tempSchedule);
     }
+
 }

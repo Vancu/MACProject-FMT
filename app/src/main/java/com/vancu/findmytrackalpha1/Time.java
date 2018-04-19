@@ -1,6 +1,8 @@
 package com.vancu.findmytrackalpha1;
 
-public class Time
+import java.io.Serializable;
+
+public class Time implements Serializable
 {
     int hour;
     int minute;
