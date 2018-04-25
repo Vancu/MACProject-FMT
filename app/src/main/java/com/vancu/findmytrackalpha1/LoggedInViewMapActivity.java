@@ -1,10 +1,12 @@
 package com.vancu.findmytrackalpha1;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.location.Location;
 import android.support.annotation.NonNull;
@@ -13,6 +15,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 import android.location.Location;
 
@@ -20,6 +25,7 @@ import com.google.gson.JsonObject;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 
+import com.mapbox.mapboxsdk.annotations.Marker;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
 import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.mapbox.mapboxsdk.geometry.LatLng;
@@ -33,9 +39,11 @@ import com.mapbox.mapboxsdk.plugins.locationlayer.LocationLayerMode;
 import com.mapbox.mapboxsdk.plugins.locationlayer.LocationLayerPlugin;
 import com.mapbox.mapboxsdk.plugins.places.autocomplete.PlaceAutocomplete;
 import com.mapbox.mapboxsdk.plugins.places.autocomplete.model.PlaceOptions;
+import com.mapbox.mapboxsdk.style.layers.Layer;
 import com.mapbox.mapboxsdk.style.layers.PropertyFactory;
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
+import com.mapbox.mapboxsdk.style.sources.VectorSource;
 import com.mapbox.services.android.telemetry.location.LocationEngine;
 import com.mapbox.services.android.telemetry.location.LocationEngineListener;
 import com.mapbox.services.android.telemetry.location.LocationEnginePriority;
@@ -52,7 +60,19 @@ import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
 import com.mapbox.api.geocoding.v5.models.CarmenFeature;
 import com.mapbox.geojson.Point;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
+import java.util.Vector;
+import org.json.JSONArray;
 
 public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -79,13 +99,41 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
     private CarmenFeature MammothLakeRdStop;
     private CarmenFeature MuirPassStop;
     private CarmenFeature EmigrantPassStop;
+    private boolean MapDone = false;
+    private HashMap<String, List<MarkerOptions>> BusStopsbyID = new HashMap<String, List<MarkerOptions>>(); //string Bus ID,
 
     private String geojsonSourceLayerId = "geojsonSourceLayerId";
     private String symbolIconId = "symbolIconId";
 
+    Spinner BusCompany, BusID, Ranges;
+
+    String BusCompanyString, BusIDString, dataTable, scheduleName, TAG_TIME, TAG_COUNT, TAG_STOP;
+
+    String TAG_NAME = "stops";
+
+    String HttpUrl = "http://73.220.191.198:13379/PullBusRouteData.php";
+
+    JSONArray stops = null;
+
+    ArrayList<HashMap<String, String>> List;
+
+    Vector<Vector<String>> Data = new Vector<Vector<String>>();
+
+    ArrayAdapter<CharSequence> adapter;
+
+    ProgressDialog progressDialog;
+
+    JSONParser jParser = new JSONParser();
+
+    int count;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        List = new ArrayList<HashMap<String, String>>();
 
         // Mapbox access token is configured here. This needs to be called either in your application
         // object or in the same activity which contains the mapview.
@@ -101,6 +149,166 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
 
         //Handles showing user location, and putting the stops on the map
         mapView.getMapAsync(this);
+
+
+        //scheduleName = getIntent().getExtras().getString("schedule");
+        BusCompany = (Spinner) findViewById(R.id.busCompanyspinner);
+        adapter = ArrayAdapter.createFromResource(this,R.array.busCompanyarray,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        BusCompany.setAdapter(adapter);
+
+        BusID = (Spinner) findViewById(R.id.BusIDspinner);
+        adapter = ArrayAdapter.createFromResource(this,R.array.emptySpinner,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        BusID.setAdapter(adapter);
+
+
+        BusCompany.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,int position,long id)
+            {
+                BusCompanyString = parent.getItemAtPosition(position).toString();
+                if(position == 0)
+                {
+                    //sets BusID to cattracks
+                    adapter = ArrayAdapter.createFromResource(LoggedInViewMapActivity.this,R.array.CattracksIDarray,android.R.layout.simple_spinner_item);
+                    BusID.setAdapter(adapter);
+                }
+                else if(position == 1)
+                {
+                    adapter = ArrayAdapter.createFromResource(LoggedInViewMapActivity.this,R.array.MercedTheBusIDarray,android.R.layout.simple_spinner_item);
+                    BusID.setAdapter(adapter);
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+
+            }
+        });
+        BusID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,int position,long id)
+            {
+                BusIDString = parent.getItemAtPosition(position).toString();
+                Data.removeAllElements();
+                //List<Marker> busMarker = new List<Marker>;
+                switch (BusIDString){
+                    case "AB":
+                        BusIDString = "A_B";
+                        dataTable = "cattracksAB";
+                        if(MapDone)
+                            showBus(BusIDString);
+                        break;
+                    case "C1Blue":
+                        BusIDString = "C1_Blue";
+                        dataTable = "cattracks1b";
+                        showBus(BusIDString);
+                        break;
+                    case "C1Gold":
+                        BusIDString = "C1_Gold";
+                        dataTable = "cattracksc1g";
+                        showBus(BusIDString);
+                        break;
+                    case "C2":
+                        BusIDString = "C2";
+                        dataTable = "cattracksc2";
+                        showBus(BusIDString);
+                        break;
+                    case "FastCat":
+                        BusIDString = "FastCat";
+                        dataTable = "cattracksfastcat";
+                        showBus(BusIDString);
+                        break;
+                    case "NiteCat":
+                        BusIDString = "NiteCat";
+                        dataTable = "cattracksnitecat";
+                        showBus(BusIDString);
+                        break;
+                    case "E":
+                        BusIDString = "E";
+                        dataTable = "cattrackse";
+                        showBus(BusIDString);
+                        break;
+                    case "E1":
+                        BusIDString = "E1";
+                        dataTable = "cattrackse1";
+                        showBus(BusIDString);
+                        break;
+                    case "E2":
+                        BusIDString = "E2";
+                        dataTable = "cattrackse2";
+                        showBus(BusIDString);
+                        break;
+                    case "G":
+                        BusIDString = "G";
+                        dataTable = "cattracksg";
+                        showBus(BusIDString);
+                        break;
+                    case "HeritageWeek":
+                        BusIDString = "Heritage";
+                        dataTable = "cattracksheritagemf";
+                        showBus(BusIDString);
+                        break;
+                    case "HeritageWeekend":
+                        BusIDString = "Heritage";
+                        dataTable = "cattracksheritagess";
+                        showBus(BusIDString);
+                        break;
+                    case "UCNorth":
+                        BusIDString = "UCNorth";
+                        dataTable = "ucbustimesnorth";
+                   //     showBus(BusIDString);
+                        break;
+                    case "UCSouth":
+                        BusIDString = "UCSouth";
+                        dataTable = "ucbustimessouth";
+                   //     showBus(BusIDString);
+                        break;
+                    default:
+                        break;
+                }
+                LoadFunction(dataTable);
+                try {
+                    Thread.sleep(250);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+
+            }
+        });
+
+
+    }
+
+    public void showBus(String ID)
+    {
+
+        /*
+        try {
+            Thread.sleep(250);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        */
+        try {
+            Thread.sleep(250);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        while (mapboxMap.getMarkers().size() > 0)
+            mapboxMap.removeMarker(mapboxMap.getMarkers().get(0));
+
+        List<MarkerOptions> BusStopID = BusStopsbyID.get(ID);
+        for(int i = 0; i < BusStopID.size(); i++)
+            mapboxMap.addMarker(BusStopID.get(i));
+
     }
 
     @SuppressWarnings( {"MissingPermission"})
@@ -142,6 +350,57 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         permissionsManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
+    public void LoadFunction(final String BusID) {
+        class LoadAllData extends AsyncTask<String, String, String> {
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                progressDialog = new ProgressDialog(LoggedInViewMapActivity.this);
+                progressDialog.setMessage("Pulling data...");
+                progressDialog.setIndeterminate(false);
+                progressDialog.setCancelable(false);
+                progressDialog.show();
+            }
+            protected String doInBackground(String... args) {
+                List<NameValuePair> params = new ArrayList<NameValuePair>();
+                params.add(new BasicNameValuePair("BusID", BusID));
+                JSONObject json = jParser.makeHttpRequest(HttpUrl, "GET", params);
+                try {
+                    stops = json.getJSONArray(TAG_NAME);
+                    TAG_COUNT = "count";
+                    for (int i = 0; i < stops.length(); i++) {
+                        JSONObject x = stops.getJSONObject(i);
+                        if (i == 0) {
+                            count = x.getInt(TAG_COUNT) + 1;
+                        } else {
+                            TAG_STOP = "name";
+                            String stopName = x.getString(TAG_STOP);
+                            Data.add(i-1, new Vector<String>(count));
+                            Vector<String> currentVec = Data.get(i-1);
+                            for (int j = 0; j < (count); j++) {
+                                if (j == 0) {
+                                    currentVec.add(stopName);
+                                } else {
+                                    TAG_TIME = "time#" + j;
+                                    String stopTime = x.getString(TAG_TIME);
+                                    currentVec.add(stopTime);
+                                }
+                            }
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+            @Override
+            protected void onPostExecute(String file_url){
+                progressDialog.dismiss();
+            }
+        }
+        LoadAllData loadData = new LoadAllData();
+        loadData.execute(BusID);
+    }
 
     //@Override
     public void onPermissionResult(boolean granted) {
@@ -185,244 +444,292 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         Icon convertedIcon2 = IconFactory.getInstance(LoggedInViewMapActivity.this).fromBitmap(icon2);
 
         //Mammoth Lake Rd Stop
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Mammoth = new MarkerOptions()
                 .position(new LatLng(37.363253,-120.429428))
                 .title("Mammoth Lake Road")
                 .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Muir Pass Stop
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Muir= new MarkerOptions()
                 .position(new LatLng(37.365616,-120.426705))
                 .title("Muir Pass/Students Activity Center")
                 .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //Emigrant Pass Stop
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Emigrant= new MarkerOptions()
                 .position(new LatLng(37.363770,-120.430687))
                 .title("Emigrant Pass")
                 .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Castle Air Park.
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Castle= new MarkerOptions()
                 .position(new LatLng(37.374616,-120.576773))
                 .title("Castle Air Park")
-                .snippet("Bus Company: CatTracks\nBus ID:A-B, ,   ")
-                .icon(convertedIcon));
+                .snippet("Bus Company: CatTracks\nBus ID:A-B")
+                .icon(convertedIcon);
+
+        //Arrow Wood
+        MarkerOptions arrowWood= new MarkerOptions()
+                .position(new LatLng(37.352652,-120.476538))
+                .title("Bellevue Ranch on Arrow Wood Dr.")
+                .snippet("Bus Company: CatTracks\nBus ID: C1, C2, FastCat, E, E2, G")
+                .icon(convertedIcon);
 
         //Mercy Hospital/Tri-college.
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Mercy= new MarkerOptions()
                 .position(new LatLng(37.339273,-120.468734))
                 .title("Mercy Hospital")
                 .snippet("Bus Company: CatTracks\nBus ID: C1,  FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Tri-College/Mercy. (actual stop is Tri-college)
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions TriCollege= new MarkerOptions()
                 .position(new LatLng(37.335907,-120.469218))
                 .title("Tri-College")
                 .snippet("Bus Company: CatTracks\nBus ID: C1,  FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //El Portal Plaza & "G" Street (bus stop on "G")
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions G_Street_Portal= new MarkerOptions()
                 .position(new LatLng(37.327082,-120.469025))
                 .title("El Portal Plaza &  Street (bus stop on 'G'')")
                 .snippet("Bus Company: CatTracks\nBus ID: C1, NiteCat, ")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Rite Aid/Walgreens
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Rite_Wall= new MarkerOptions()
                 .position(new LatLng(37.324979,-120.468982))
                 .title("Rite Aid/Walgreens")
                 .snippet("Bus Company: CatTracks\nBus ID: C1, NiteCat, E, E1, ")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Merced tbSun-Star/Staples (tbSun Star Sign)
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions SunStar= new MarkerOptions()
                 .position(new LatLng(37.316207,-120.469580))
                 .title("Merced Sun Star Sign")
                 .snippet("Bus Company: CatTracks\nBus ID: C1")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Alexander & "G" Street (bus stop on "G")
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions AlexG= new MarkerOptions()
                 .position(new LatLng(37.315815,-120.469213))
                 .title("Alexander & G Street (bus stop on G)")
                 .snippet("Bus Company: CatTracks\nBus ID: C1")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Swiss Colony Apts.
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Swiss= new MarkerOptions()
                 .position(new LatLng(37.318274,-120.474071))
                 .title("Swiss Colony Apts.")
                 .snippet("Bus Company: CatTracks\nBus ID: C1")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //College Green on Park @ 3040 Park Ave
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions ParkAve= new MarkerOptions()
                 .position(new LatLng(37.318133,-120.473114))
                 .title("College Green on Park @ 3040 Park Ave")
                 .snippet("Bus Company: CatTracks\nBus ID: C1")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Meadows Ave & Olivewood Dr. (Food Maxx) (ACTUALL STREET IS OLIVEWOOD)
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Olivewood= new MarkerOptions()
                 .position(new LatLng(37.318235,-120.490786))
                 .title("Olivewood Dr. (Food Maxx, Southbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: C1, E,")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Meadows Ave & Olivewood Dr. (Food Maxx) (ACTUAL STREET IS MEADOWS AVE.
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Meadows= new MarkerOptions()
                 .position(new LatLng(37.318112,-120.490558))
                 .title("Meadows Ave (Food Maxx, Northbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: C1, E1")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Walmart on Loughborough at "Pier One" bus stop
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions AtPierOne= new MarkerOptions()
                 .position(new LatLng(37.317600,-120.499436))
                 .title("Walmart on Loughborough at Pier One bus stop")
                 .snippet("Bus Company: CatTracks\nBus ID: C1")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Walmart on Loughborough across "Pier One"
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions acrossPierOne= new MarkerOptions()
                 .position(new LatLng(37.317391,-120.499568))
                 .title("Walmart on Loughborough accross Pier One bus stop")
                 .snippet("Bus Company: CatTracks\nBus ID: C1, E1")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Granville Luxury Apartments
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Granville= new MarkerOptions()
                 .position(new LatLng(37.315275,-120.502951))
                 .title("Granville Luxury Apartments")
                 .snippet("Bus Company: CatTracks\nBus ID: C1, E, E1")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Ironstone Dr.
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Ironstone= new MarkerOptions()
                 .position(new LatLng(37.342663,-120.477819))
                 .title("Ironstone Dr.")
                 .snippet("Bus Company: CatTracks\nBus ID: C2, E, E2, G")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //"R" Street Village Apts.
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions rStreet= new MarkerOptions()
                 .position(new LatLng(37.335605,-120.486243))
                 .title("R Street Village Apts.")
                 .snippet("Bus Company: CatTracks\nBus ID: C2, NiteCat, E, E2, G, Heritage ")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //El Redondo @ corner of Jenner before traffic circle
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions elRedondo= new MarkerOptions()
                 .position(new LatLng(37.334307,-120.495182))
                 .title("El Redondo @ corner of Jenner before traffic circle")
                 .snippet("Bus Company: CatTracks\nBus ID: C2, E, E2, G")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Buena Vista
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions buenaVista= new MarkerOptions()
                 .position(new LatLng(37.326230,-120.502370))
                 .title("Buena Vista")
                 .snippet("Bus Company: CatTracks\nBus ID: C2, E, E2, ")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Merced Mall / Target
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions Target= new MarkerOptions()
                 .position(new LatLng(37.323377,-120.485577))
                 .title("Merced Mall/Target")
                 .snippet("Bus Company: CatTracks\nBus ID: C2, E, E1, E2")
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //M Street Apts.
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions mStreet= new MarkerOptions()
                 .position(new LatLng(37.3246486998446,-120.47819020087968))
                 .title("M Street Apts.")
                 .snippet(getString(R.string.draw_marker_options_snippet))
-                .icon(convertedIcon));
+                .icon(convertedIcon);
 
         //Merced College Stop
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions mCollege= new MarkerOptions()
                 .position(new LatLng(37.33462266081097,-120.47795600888725))
                 .title("Merced College Stop")
                 .snippet("Bus Company: CatTracks\nBus ID: A-B, C2, E, E1, E2, G, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //In-Shape
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions inShape= new MarkerOptions()
                 .position(new LatLng(37.332007,-120.465768))
                 .title("In-Shape")
                 .snippet("Bus Company: CatTracks\nBus ID:  FastCat, E, E1, Heritage ")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //University Surgery Center (westbound)
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions uniSurgeryWest= new MarkerOptions()
                 .position(new LatLng(37.332346,-120.451474))
                 .title("University Surgery Center (westbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //University Surgery Center (eastbound)
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions uniSurgeryEast= new MarkerOptions()
                 .position(new LatLng(37.332081,-120.451704))
                 .title("University Surgery Center (eastbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //Starbucks/Promenade Center
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions starbucks= new MarkerOptions()
                 .position(new LatLng(37.332208,-120.460500))
                 .title("Starbucks/Promenade Center")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, E, E1, E2, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //Moraga Subdivision (westbound)
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions moragaWest= new MarkerOptions()
                 .position(new LatLng(37.332342,-120.438691))
                 .title("Moraga Subdivision (westbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, E, E1, E2, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //Moraga Subdivision (eastbound)
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions moragaEast= new MarkerOptions()
                 .position(new LatLng(37.332047,-120.437723))
                 .title("Moraga Subdivision (eastbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, E, E1, E2, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //Merced Mall Theater
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions mallTheater= new MarkerOptions()
                 .position(new LatLng(37.320153,-120.480135))
                 .title("Merced Mall Theater")
                 .snippet("Bus Company: CatTracks\nBus ID: NiteCat, E, E1, ")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //Applebee's
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions applebees= new MarkerOptions()
                 .position(new LatLng(37.318383,-120.497348))
                 .title("Applebee's")
                 .snippet("Bus Company: CatTracks\nBus ID: NiteCat, ")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //Hollywood Theatres Mainplace
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions hollyTheatre= new MarkerOptions()
                 .position(new LatLng(37.320153,-120.480135))
                 .title("Hollywood Theatres Mainplace")
                 .snippet("Bus Company: CatTracks\nBus ID: NiteCat, E, E1, G \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
 
         //Amtrak
-        mapboxMap.addMarker(new MarkerOptions()
+        MarkerOptions amTrak= new MarkerOptions()
                 .position(new LatLng(37.307610,-120.477389))
                 .title("Amtrak")
                 .snippet("Bus Company: CatTracks\nBus ID: E, E1, G, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2));
+                .icon(convertedIcon2);
+        List<MarkerOptions> A_B = new ArrayList<>();
+        A_B.addAll(Arrays.asList(Mammoth, Muir, Emigrant, Castle, mCollege));
+        BusStopsbyID.put("A_B", A_B);
 
+        List<MarkerOptions> C1 = new ArrayList<>();
+        C1.addAll(Arrays.asList(Mammoth, Muir, Emigrant, arrowWood, TriCollege, Mercy, G_Street_Portal, Rite_Wall, SunStar, AlexG, Swiss,
+                ParkAve, Meadows, Olivewood, AtPierOne, acrossPierOne, Granville));
+        BusStopsbyID.put("C1_Blue", C1);
+        BusStopsbyID.put("C1_Gold", C1);
 
+        List<MarkerOptions> C2 = new ArrayList<>();
+        C2.addAll(Arrays.asList(Mammoth, Muir, Emigrant, rStreet, elRedondo, buenaVista, Target, mStreet, mCollege, Ironstone, arrowWood));
+        BusStopsbyID.put("C2", C2);
+
+        List<MarkerOptions> FastCat = new ArrayList<>();
+        FastCat.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaWest, moragaEast, starbucks, Mercy, arrowWood, TriCollege, inShape, uniSurgeryEast, uniSurgeryWest));
+        BusStopsbyID.put("FastCat", FastCat);
+
+        List<MarkerOptions> NiteCat = new ArrayList<>();
+        NiteCat.addAll(Arrays.asList(Mammoth, Muir, Emigrant, rStreet, mallTheater, applebees, hollyTheatre, Rite_Wall, G_Street_Portal));
+        BusStopsbyID.put("NiteCat", NiteCat);
+
+        List<MarkerOptions> E = new ArrayList<>();
+        E.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaEast, moragaWest, starbucks, mCollege, Ironstone, arrowWood, rStreet, elRedondo, buenaVista, Target, mStreet, mallTheater, amTrak, hollyTheatre, Granville, Olivewood, Rite_Wall, inShape));
+        BusStopsbyID.put("E", E);
+
+        List<MarkerOptions> E1 = new ArrayList<>();
+        E1.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaEast, moragaWest, starbucks, mCollege, Target, mallTheater, amTrak, hollyTheatre, Granville, Olivewood, Rite_Wall, inShape));
+        BusStopsbyID.put("E1", E1);
+
+        List<MarkerOptions> E2 = new ArrayList<>();
+        E2.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaEast, moragaWest, starbucks, rStreet, elRedondo, buenaVista, Target, mStreet, mCollege, Ironstone, arrowWood));
+        BusStopsbyID.put("E2", E2);
+
+        List<MarkerOptions> G = new ArrayList<>();
+        G.addAll(Arrays.asList(Mammoth, Muir, Emigrant, rStreet, elRedondo, mCollege, Ironstone, arrowWood, amTrak, hollyTheatre));
+        BusStopsbyID.put("G", G);
+
+        List<MarkerOptions> Heritage = new ArrayList<>();
+        Heritage.addAll(Arrays.asList(Mammoth, Muir, Emigrant, rStreet, inShape));
+        BusStopsbyID.put("Heritage", Heritage);
+
+        MapDone = true;
         initSearchFab();
         addUserLocations();
 
@@ -450,7 +757,7 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                         .placeOptions(PlaceOptions.builder()
                                 .backgroundColor(Color.parseColor("#EEEEEE"))
                                 //.country(Locale)
-                                //.proximity(Point.fromLngLat(lastLocation.getLongitude(),originLocation.getLatitude()))
+                                //.proximity(Point.fromLngLat(originLocation.getLongitude(),originLocation.getLatitude()))
                                 .proximity(Point.fromLngLat(-120.47819020087968, 37.3246486998446))
                                 .limit(10)
                                 .addInjectedFeature(MStreetStop)
@@ -620,8 +927,6 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         super.onSaveInstanceState(outState);
         mapView.onSaveInstanceState(outState);
     }
-
-
 
     //sets up the bottom navigation view for current activitiy.
     public void setupBottomNavBar()

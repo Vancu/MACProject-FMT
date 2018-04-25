@@ -15,7 +15,7 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
         app:layout_constraintEnd_toEndOf="parent"
         mapbox:srcCompat="@drawable/ic_search_black_24dp" />
 
@@ -31,8 +31,8 @@
 
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
-        android:layout_width="384dp"
-        android:layout_height="510dp"
+        android:layout_width="419dp"
+        android:layout_height="603dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +43,35 @@
         mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10">
 
     </com.mapbox.mapboxsdk.maps.MapView>
+
+    <Spinner
+        android:id="@+id/busCompanyspinner"
+        android:layout_width="152dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="42dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="150dp"
+        android:background="@android:color/darker_gray"
+        android:entries="@array/busCompanyarray"
+        app:layout_constraintBottom_toTopOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/BusIDspinner"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        android:entries="@array/emptySpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busCompanyspinner" />
 
 
 </android.support.constraint.ConstraintLayout>
