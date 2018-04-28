@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mapbox_plugins_bright_blue"
     tools:context="com.vancu.findmytrackalpha1.LoginRegisterActivity">
 
     <ImageView
@@ -13,10 +14,10 @@
         android:layout_marginEnd="95dp"
         android:layout_marginStart="95dp"
         android:layout_marginTop="36dp"
+        android:src="@drawable/app_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bMainLogin"
@@ -25,6 +26,7 @@
         android:layout_marginEnd="69dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="78dp"
+        android:background="@color/BottomNav"
         android:onClick="bLogin"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +40,7 @@
         android:layout_marginEnd="69dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="16dp"
+        android:background="@color/AppYellow"
         android:onClick="bRegister"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"

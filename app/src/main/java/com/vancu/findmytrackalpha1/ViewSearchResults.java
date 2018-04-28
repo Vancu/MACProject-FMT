@@ -164,8 +164,6 @@ public class ViewSearchResults extends AppCompatActivity {
                 {
                     currVec = Data.get(position);
                     stoptime = currVec.get(i);
-                    System.out.print(stoptime);
-                    //Objects.equals("11:59:59", stoptime);
                     if (!stoptime.equals("11:59:59") && !stoptime.equals("23:59:59"))
                         TimeStops.add(stoptime);
                 }

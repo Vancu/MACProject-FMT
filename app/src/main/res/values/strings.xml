@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">FindMyTrackAlpha1</string>
+    <string name="app_name">Find My Track [BETA]</string>
+    <string-array name="busCompanyarrayMap">
+        <item>Select Company</item>
+        <item>Cattracks</item>
+        <item>Merced TheBus</item>
+    </string-array>
     <string-array name="busCompanyarray">
         <item>Cattracks</item>
         <item>Merced TheBus</item>
@@ -8,6 +13,22 @@
     <string-array name="AMPM">
         <item>AM</item>
         <item>PM</item>
+    </string-array>
+
+    <string-array name="CattracksIDarrayMap">
+        <item>Select Route</item>
+        <item>AB</item>
+        <item>C1Blue</item>
+        <item>C1Gold</item>
+        <item>C2</item>
+        <item>FastCat</item>
+        <item>NiteCat</item>
+        <item>E</item>
+        <item>E1</item>
+        <item>E2</item>
+        <item>G</item>
+        <item>HeritageWeek</item>
+        <item>HeritageWeekend</item>
     </string-array>
 
     <string-array name="CattracksIDarray">
@@ -23,6 +44,12 @@
         <item>G</item>
         <item>HeritageWeek</item>
         <item>HeritageWeekend</item>
+    </string-array>
+
+    <string-array name="MercedTheBusIDarrayMap">
+        <item>Select Route</item>
+        <item>UCNorth</item>
+        <item>UCSouth</item>
     </string-array>
 
     <string-array name="MercedTheBusIDarray">

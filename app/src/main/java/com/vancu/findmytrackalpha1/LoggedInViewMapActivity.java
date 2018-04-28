@@ -196,86 +196,90 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                 //List<Marker> busMarker = new List<Marker>;
                 switch (BusIDString){
                     case "AB":
-                        BusIDString = "A_B";
+                        BusIDString = "AB";
                         dataTable = "cattracksAB";
-                        if(MapDone)
-                            showBus(BusIDString);
+                        //if(MapDone)
+                        //    showBus(BusIDString);
                         break;
                     case "C1Blue":
-                        BusIDString = "C1_Blue";
-                        dataTable = "cattracks1b";
-                        showBus(BusIDString);
+                        BusIDString = "C1";
+                        dataTable = "cattracksc1b";
+                        //showBus(BusIDString);
                         break;
                     case "C1Gold":
-                        BusIDString = "C1_Gold";
+                        BusIDString = "C1";
                         dataTable = "cattracksc1g";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "C2":
                         BusIDString = "C2";
                         dataTable = "cattracksc2";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "FastCat":
                         BusIDString = "FastCat";
                         dataTable = "cattracksfastcat";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "NiteCat":
                         BusIDString = "NiteCat";
                         dataTable = "cattracksnitecat";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "E":
                         BusIDString = "E";
                         dataTable = "cattrackse";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "E1":
                         BusIDString = "E1";
                         dataTable = "cattrackse1";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "E2":
                         BusIDString = "E2";
                         dataTable = "cattrackse2";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "G":
                         BusIDString = "G";
                         dataTable = "cattracksg";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "HeritageWeek":
                         BusIDString = "Heritage";
                         dataTable = "cattracksheritagemf";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "HeritageWeekend":
                         BusIDString = "Heritage";
                         dataTable = "cattracksheritagess";
-                        showBus(BusIDString);
+                        //showBus(BusIDString);
                         break;
                     case "UCNorth":
                         BusIDString = "UCNorth";
                         dataTable = "ucbustimesnorth";
-                   //     showBus(BusIDString);
+                   //showBus(BusIDString);
                         break;
                     case "UCSouth":
                         BusIDString = "UCSouth";
                         dataTable = "ucbustimessouth";
-                   //     showBus(BusIDString);
+                   //showBus(BusIDString);
                         break;
                     default:
                         break;
                 }
-                LoadFunction(dataTable);
-                try {
-                    Thread.sleep(250);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                if (!BusIDString.equals("Select Company") && !BusIDString.equals("Select Route"))
+                {
+                    LoadFunction(dataTable);
+                    try {
+                        Thread.sleep(250);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    if (MapDone)
+                        showBus(BusIDString);
                 }
-
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent)
@@ -285,6 +289,18 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         });
 
 
+    }
+
+    public String addTimes(int index)
+    {
+        String all_route_time = "Time for " + BusIDString + " is... \n";
+        for(int j = 1; j < Data.get(index).size(); j++)
+        {
+            String stoptime = Data.get(index).get(j);
+            if (!stoptime.equals("11:59:59") && !stoptime.equals("23:59:59"))
+                all_route_time += stoptime + " ";
+        }
+        return all_route_time;
     }
 
     public void showBus(String ID)
@@ -307,7 +323,12 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
 
         List<MarkerOptions> BusStopID = BusStopsbyID.get(ID);
         for(int i = 0; i < BusStopID.size(); i++)
+        {
+            MarkerOptions schedule = BusStopID.get(i);
+            String all_Time_for_schedule = addTimes(i);
+            schedule.snippet(all_Time_for_schedule);
             mapboxMap.addMarker(BusStopID.get(i));
+        }
 
     }
 
@@ -436,12 +457,8 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         Bitmap icon = BitmapFactory.decodeResource(
                 LoggedInViewMapActivity.this.getResources(), R.drawable.ic_action_name);
         mapboxMap.addImage(MARKER_IMAGE, icon);
-        Bitmap icon2 = BitmapFactory.decodeResource(
-                LoggedInViewMapActivity.this.getResources(), R.drawable.ic_action_name2);
-        //addMarkers();
 
         Icon convertedIcon = IconFactory.getInstance(LoggedInViewMapActivity.this).fromBitmap(icon);
-        Icon convertedIcon2 = IconFactory.getInstance(LoggedInViewMapActivity.this).fromBitmap(icon2);
 
         //Mammoth Lake Rd Stop
         MarkerOptions Mammoth = new MarkerOptions()
@@ -450,17 +467,39 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                 .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon);
 
+        //Mammoth Lake Rd Stop
+        MarkerOptions MammothRepeat = new MarkerOptions()
+                .position(new LatLng(37.363211,-120.429316))
+                .title("Mammoth Lake Road (From Moraga)")
+                .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
+                .icon(convertedIcon);
+
+
         //Muir Pass Stop
         MarkerOptions Muir= new MarkerOptions()
                 .position(new LatLng(37.365616,-120.426705))
                 .title("Muir Pass/Students Activity Center")
                 .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
+
+        //Muir Pass Stop
+        MarkerOptions MuirRepeat= new MarkerOptions()
+                .position(new LatLng(37.365679,-120.426916))
+                .title("Muir Pass/Students Activity Center (From Moraga)")
+                .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
+                .icon(convertedIcon);
 
         //Emigrant Pass Stop
         MarkerOptions Emigrant= new MarkerOptions()
                 .position(new LatLng(37.363770,-120.430687))
                 .title("Emigrant Pass")
+                .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
+                .icon(convertedIcon);
+
+        //Emigrant Pass Stop
+        MarkerOptions EmigrantRepeat= new MarkerOptions()
+                .position(new LatLng(37.363871,-120.430768))
+                .title("Emigrant Pass (From Moraga)")
                 .snippet("Bus Company: CatTracks\nBus ID:A-B, C1, C2, FastCat, NiteCat, E, E1, E2, G, Heritage \n\nBus Company: TheBus \nBus ID: UC,")
                 .icon(convertedIcon);
 
@@ -471,9 +510,16 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                 .snippet("Bus Company: CatTracks\nBus ID:A-B")
                 .icon(convertedIcon);
 
-        //Arrow Wood
+        //Arrow Wood to School
         MarkerOptions arrowWood= new MarkerOptions()
                 .position(new LatLng(37.352652,-120.476538))
+                .title("Bellevue Ranch on Arrow Wood Dr.")
+                .snippet("Bus Company: CatTracks\nBus ID: C1, C2, FastCat, E, E2, G")
+                .icon(convertedIcon);
+
+        //Arrow Wood from School
+        MarkerOptions arrowWoodLeave= new MarkerOptions()
+                .position(new LatLng(37.35255,-120.475696))
                 .title("Bellevue Ranch on Arrow Wood Dr.")
                 .snippet("Bus Company: CatTracks\nBus ID: C1, C2, FastCat, E, E2, G")
                 .icon(convertedIcon);
@@ -616,93 +662,130 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
                 .position(new LatLng(37.33462266081097,-120.47795600888725))
                 .title("Merced College Stop")
                 .snippet("Bus Company: CatTracks\nBus ID: A-B, C2, E, E1, E2, G, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //In-Shape
         MarkerOptions inShape= new MarkerOptions()
                 .position(new LatLng(37.332007,-120.465768))
                 .title("In-Shape")
                 .snippet("Bus Company: CatTracks\nBus ID:  FastCat, E, E1, Heritage ")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //University Surgery Center (westbound)
         MarkerOptions uniSurgeryWest= new MarkerOptions()
                 .position(new LatLng(37.332346,-120.451474))
                 .title("University Surgery Center (westbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //University Surgery Center (eastbound)
         MarkerOptions uniSurgeryEast= new MarkerOptions()
                 .position(new LatLng(37.332081,-120.451704))
                 .title("University Surgery Center (eastbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //Starbucks/Promenade Center
         MarkerOptions starbucks= new MarkerOptions()
                 .position(new LatLng(37.332208,-120.460500))
                 .title("Starbucks/Promenade Center")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, E, E1, E2, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //Moraga Subdivision (westbound)
         MarkerOptions moragaWest= new MarkerOptions()
                 .position(new LatLng(37.332342,-120.438691))
                 .title("Moraga Subdivision (westbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, E, E1, E2, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //Moraga Subdivision (eastbound)
         MarkerOptions moragaEast= new MarkerOptions()
                 .position(new LatLng(37.332047,-120.437723))
                 .title("Moraga Subdivision (eastbound)")
                 .snippet("Bus Company: CatTracks\nBus ID: FastCat, E, E1, E2, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //Merced Mall Theater
         MarkerOptions mallTheater= new MarkerOptions()
                 .position(new LatLng(37.320153,-120.480135))
                 .title("Merced Mall Theater")
                 .snippet("Bus Company: CatTracks\nBus ID: NiteCat, E, E1, ")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //Applebee's
         MarkerOptions applebees= new MarkerOptions()
                 .position(new LatLng(37.318383,-120.497348))
                 .title("Applebee's")
                 .snippet("Bus Company: CatTracks\nBus ID: NiteCat, ")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //Hollywood Theatres Mainplace
         MarkerOptions hollyTheatre= new MarkerOptions()
                 .position(new LatLng(37.320153,-120.480135))
                 .title("Hollywood Theatres Mainplace")
                 .snippet("Bus Company: CatTracks\nBus ID: NiteCat, E, E1, G \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2);
+                .icon(convertedIcon);
 
         //Amtrak
         MarkerOptions amTrak= new MarkerOptions()
                 .position(new LatLng(37.307610,-120.477389))
                 .title("Amtrak")
                 .snippet("Bus Company: CatTracks\nBus ID: E, E1, G, \n\nBus Company: TheBus \nBus ID: UC,")
-                .icon(convertedIcon2);
-        List<MarkerOptions> A_B = new ArrayList<>();
-        A_B.addAll(Arrays.asList(Mammoth, Muir, Emigrant, Castle, mCollege));
-        BusStopsbyID.put("A_B", A_B);
+                .icon(convertedIcon);
+
+        //Merced Transpo
+        MarkerOptions mTranspo= new MarkerOptions()
+                .position(new LatLng(37.301829,-120.488223))
+                .title("Merced Transport")
+                .snippet("Bus Company: CatTracks\nBus ID: E, E1, G, \n\nBus Company: TheBus \nBus ID: UC,")
+                .icon(convertedIcon);
+
+        //The Bus MCAG Office
+        MarkerOptions MCAG= new MarkerOptions()
+                .position(new LatLng(37.307610,-120.477389))
+                .title("The Bus - MCAG Office")
+                .snippet("Bus Company: CatTracks\nBus ID: E, E1, G, \n\nBus Company: TheBus \nBus ID: UC,")
+                .icon(convertedIcon);
+
+        //M St. and Olive
+        MarkerOptions mStOlive= new MarkerOptions()
+                .position(new LatLng(37.318178,-120.478359))
+                .title("M Street & Olive Avenue")
+                .snippet("Bus Company: CatTracks\nBus ID: E, E1, G, \n\nBus Company: TheBus \nBus ID: UC,")
+                .icon(convertedIcon);
+
+        //Merced College UC Parking
+        MarkerOptions mCollegeUCPark= new MarkerOptions()
+                .position(new LatLng(37.338978,-120.476530))
+                .title("Merced College - UC Parking")
+                .snippet("Bus Company: CatTracks\nBus ID: E, E1, G, \n\nBus Company: TheBus \nBus ID: UC,")
+                .icon(convertedIcon);
+
+        //Paulson and Yosemite Avenue
+        MarkerOptions PaulsonYosemite= new MarkerOptions()
+                .position(new LatLng(37.332043,-120.460490))
+                .title("Paulson and Yosemite Avenue")
+                .snippet("Bus Company: CatTracks\nBus ID: E, E1, G, \n\nBus Company: TheBus \nBus ID: UC,")
+                .icon(convertedIcon);
+
+
+
+        List<MarkerOptions> AB = new ArrayList<>();
+        AB.addAll(Arrays.asList(Muir, Emigrant, Castle, mCollege, Mammoth));
+        BusStopsbyID.put("AB", AB);
 
         List<MarkerOptions> C1 = new ArrayList<>();
-        C1.addAll(Arrays.asList(Mammoth, Muir, Emigrant, arrowWood, TriCollege, Mercy, G_Street_Portal, Rite_Wall, SunStar, AlexG, Swiss,
-                ParkAve, Meadows, Olivewood, AtPierOne, acrossPierOne, Granville));
-        BusStopsbyID.put("C1_Blue", C1);
-        BusStopsbyID.put("C1_Gold", C1);
+
+        C1.addAll(Arrays.asList(Granville, acrossPierOne, Meadows, Swiss, AlexG, Rite_Wall, G_Street_Portal, Mercy, arrowWood, Mammoth, Muir, Emigrant, TriCollege, G_Street_Portal, SunStar, ParkAve, Olivewood, AtPierOne));
+        BusStopsbyID.put("C1", C1);
 
         List<MarkerOptions> C2 = new ArrayList<>();
-        C2.addAll(Arrays.asList(Mammoth, Muir, Emigrant, rStreet, elRedondo, buenaVista, Target, mStreet, mCollege, Ironstone, arrowWood));
+        C2.addAll(Arrays.asList(rStreet, elRedondo, buenaVista, Target, mStreet, mCollege, Ironstone, arrowWood, Mammoth, Muir, Emigrant));
         BusStopsbyID.put("C2", C2);
 
         List<MarkerOptions> FastCat = new ArrayList<>();
-        FastCat.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaWest, moragaEast, starbucks, Mercy, arrowWood, TriCollege, inShape, uniSurgeryEast, uniSurgeryWest));
+        FastCat.addAll(Arrays.asList(moragaWest, uniSurgeryWest, starbucks, Mercy, arrowWood, Mammoth, Muir, Emigrant, arrowWoodLeave, TriCollege, inShape, uniSurgeryEast, moragaEast, MammothRepeat, MuirRepeat, EmigrantRepeat));
         BusStopsbyID.put("FastCat", FastCat);
 
         List<MarkerOptions> NiteCat = new ArrayList<>();
@@ -710,24 +793,32 @@ public class LoggedInViewMapActivity extends AppCompatActivity implements OnMapR
         BusStopsbyID.put("NiteCat", NiteCat);
 
         List<MarkerOptions> E = new ArrayList<>();
-        E.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaEast, moragaWest, starbucks, mCollege, Ironstone, arrowWood, rStreet, elRedondo, buenaVista, Target, mStreet, mallTheater, amTrak, hollyTheatre, Granville, Olivewood, Rite_Wall, inShape));
+        E.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaWest, starbucks, mCollege, Ironstone, arrowWood, rStreet, elRedondo, buenaVista, Target, mStreet, mallTheater, amTrak, hollyTheatre, Granville, Olivewood, Rite_Wall, inShape, moragaEast));
         BusStopsbyID.put("E", E);
 
         List<MarkerOptions> E1 = new ArrayList<>();
-        E1.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaEast, moragaWest, starbucks, mCollege, Target, mallTheater, amTrak, hollyTheatre, Granville, Olivewood, Rite_Wall, inShape));
+        E1.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaWest, starbucks, mCollege, Target, mallTheater, amTrak, hollyTheatre, Granville, Olivewood, Rite_Wall, inShape, moragaEast));
         BusStopsbyID.put("E1", E1);
 
         List<MarkerOptions> E2 = new ArrayList<>();
-        E2.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaEast, moragaWest, starbucks, rStreet, elRedondo, buenaVista, Target, mStreet, mCollege, Ironstone, arrowWood));
+        E2.addAll(Arrays.asList(Mammoth, Muir, Emigrant, moragaWest, starbucks, rStreet, elRedondo, buenaVista, Target, mStreet, mCollege, Ironstone, arrowWood));
         BusStopsbyID.put("E2", E2);
 
         List<MarkerOptions> G = new ArrayList<>();
-        G.addAll(Arrays.asList(Mammoth, Muir, Emigrant, rStreet, elRedondo, mCollege, Ironstone, arrowWood, amTrak, hollyTheatre));
+        G.addAll(Arrays.asList(rStreet, elRedondo, mCollege, Ironstone, arrowWood, Mammoth, Muir, Emigrant, amTrak, hollyTheatre));
         BusStopsbyID.put("G", G);
 
         List<MarkerOptions> Heritage = new ArrayList<>();
-        Heritage.addAll(Arrays.asList(Mammoth, Muir, Emigrant, rStreet, inShape));
+        Heritage.addAll(Arrays.asList(rStreet, inShape, Mammoth, Muir, Emigrant));
         BusStopsbyID.put("Heritage", Heritage);
+
+        List<MarkerOptions> UCSouth = new ArrayList<>();
+        UCSouth.addAll(Arrays.asList(Muir, Emigrant, PaulsonYosemite, TriCollege, mCollege, mStOlive, amTrak, mTranspo));
+        BusStopsbyID.put("UCSouth", UCSouth);
+
+        List<MarkerOptions> UCNorth = new ArrayList<>();
+        UCNorth.addAll(Arrays.asList(mTranspo, MCAG, amTrak, mStOlive, mCollege, mCollegeUCPark, PaulsonYosemite, Muir));
+        BusStopsbyID.put("UCNorth", UCNorth);
 
         MapDone = true;
         initSearchFab();

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mapbox_plugins_bright_blue"
     tools:context="com.vancu.findmytrackalpha1.LoginActivity">
 
     <TextView
@@ -75,9 +76,9 @@
         android:layout_width="351dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:background="@color/BottomNav"
         android:onClick="bLoggedInScreen"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"

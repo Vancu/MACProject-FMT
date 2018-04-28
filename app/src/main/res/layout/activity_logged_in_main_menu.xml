@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mapbox_plugins_bright_blue"
     tools:context="com.vancu.findmytrackalpha1.LoggedInMainMenuActivity">
 
     <TextView
