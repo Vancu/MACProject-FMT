@@ -33,12 +33,13 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
 
     ArrayAdapter<CharSequence> adapter;
 
-    protected void writeObjectFile() {
+    protected void writeObjectFile(Schedule temp) {
         File file = new File(this.getFilesDir(), "customScheduleList.ser");
         try {
 //            FileOutputStream fos = new FileOutputStream("customScheduleList.ser");
             FileOutputStream fos = openFileOutput("customScheduleList.ser", this.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
+            list.add(temp);
             oos.writeObject(list);
             oos.close();
         }
@@ -57,12 +58,11 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
             ObjectInputStream ois = new ObjectInputStream(fis);
             // add schedule to list if exists
             list = (ArrayList<Schedule>)ois.readObject();
-            list.add(temp);
-            writeObjectFile();
+            writeObjectFile(temp);
             ois.close();
         }
         catch (FileNotFoundException e) {
-            writeObjectFile();
+            writeObjectFile(temp);
         }
         catch (IOException e){
             e.printStackTrace();
@@ -247,6 +247,7 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
     }
 
     public void bCreate(View view) {
+        Intent intent = new Intent(NewCustomScheduleActivity.this,LoggedInViewSchedule.class);
         Schedule tempSchedule = new Schedule(etNameForSchedule.getText().toString());
         Stop tempStop = new Stop(etBusStopAddress.getText().toString());
         Time tempTime = new Time();
@@ -259,6 +260,7 @@ public class NewCustomScheduleActivity extends AppCompatActivity {
         tempStop.addTime(tempTime);
         tempSchedule.addStop(tempStop);
         readObjectFile(tempSchedule);
+        startActivity(intent);
     }
 
 }

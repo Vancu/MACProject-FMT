@@ -11,7 +11,7 @@ public class Time implements Serializable
     String stringTime;
 
     public Time() {
-        hour = 0;
+        hour = 25;
         minute = 0;
         stringTime = Integer.toString(hour) + ":" + Integer.toString(minute);
     }
@@ -36,10 +36,12 @@ public class Time implements Serializable
 
     public String getstringTime()
     {
-        if(hour == 0) {
-            stringTime = Integer.toString(hour) + ":" + Integer.toString(minute);
+        if(hour == 25) {
+            return stringTime;
         }
-        return stringTime;
+        else {
+            return stringTime = Integer.toString(hour) + ":" + Integer.toString(minute);
+        }
     }
 
     public void setHour(int hour) {

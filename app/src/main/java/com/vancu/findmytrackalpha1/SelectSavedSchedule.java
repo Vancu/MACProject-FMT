@@ -23,12 +23,17 @@ public class SelectSavedSchedule extends AppCompatActivity {
     ListView lvCustomSchedule;
     ArrayList<Schedule> list = new ArrayList<>();
     ArrayList<String> schedulenames = new ArrayList<>();
+    Stop tempstop;
+    Time temptime;
 
-    protected void writeObjectFile(ArrayList<Schedule> inputlist) {
+    protected void writeObjectFile() {
+        String dir = getFilesDir().getAbsolutePath();
+        File f0 = new File(dir,"customScheduleList.ser");
+        boolean deleted = f0.delete();
         try {
             FileOutputStream fos = openFileOutput("customScheduleList.ser", this.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(inputlist);
+            oos.writeObject(list);
             oos.close();
         }
         catch (FileNotFoundException e) {
@@ -77,13 +82,13 @@ public class SelectSavedSchedule extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(SelectSavedSchedule.this,LoggedInScheduleActivity.class);
-                Stop tempstop = new Stop(stopname);
-                Time temptime = new Time();
+                tempstop = new Stop(stopname);
+                temptime = new Time();
                 String time = getIntent().getExtras().getString("time");
                 temptime.setStringTime(time);
                 tempstop.addTime(temptime);
                 list.get(position).addStop(tempstop);
-                writeObjectFile(list);
+                writeObjectFile();
                 startActivity(intent);
             }
         });

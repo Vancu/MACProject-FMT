@@ -1,8 +1,10 @@
 package com.vancu.findmytrackalpha1;
 
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDialogFragment;
 import android.view.LayoutInflater;
@@ -29,6 +31,8 @@ public class SearchStopsDialog extends AppCompatDialogFragment {
                     }
                 });
         final EditText scheduleInput = view.findViewById(R.id.scheduleInput);
+
+
 
         return builder.create();
     }
