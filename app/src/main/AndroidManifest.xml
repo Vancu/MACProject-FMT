@@ -49,7 +49,9 @@
         <activity
             android:name=".ViewCustomScheduleStops"
             android:label="@string/title_activity_view_custom_schedule_stops"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".ViewCustomScheduleTimes" />
+        <activity android:name=".SelectSavedSchedule"></activity>
     </application>
 
 </manifest>

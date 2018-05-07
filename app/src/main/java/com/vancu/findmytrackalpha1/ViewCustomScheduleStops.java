@@ -1,11 +1,13 @@
 package com.vancu.findmytrackalpha1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -48,15 +50,6 @@ public class ViewCustomScheduleStops extends AppCompatActivity {
 
         pos = getIntent().getExtras().getInt("pos");
 
-        /*for(int i = 0; i < list.size(); i++)
-        {
-            if(list.get(i).name.equals(name))
-            {
-                stops = list.get(i).stops;
-                break;
-            }
-        }*/
-
         stops = list.get(pos).stops;
 
         for(int i = 0; i < stops.size(); i++)
@@ -66,6 +59,16 @@ public class ViewCustomScheduleStops extends AppCompatActivity {
         lvStops = findViewById(R.id.lvCustomStops);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,stopNames);
         lvStops.setAdapter(arrayAdapter);
+
+        lvStops.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ViewCustomScheduleStops.this,ViewCustomScheduleTimes.class);
+                intent.putExtra("pos",pos);
+                intent.putExtra("pos2",position);
+                startActivity(intent);
+            }
+        });
 
 
     }

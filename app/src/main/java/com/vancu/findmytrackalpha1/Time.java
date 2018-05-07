@@ -2,6 +2,8 @@ package com.vancu.findmytrackalpha1;
 
 import java.io.Serializable;
 
+import static com.google.android.gms.internal.zzbgp.NULL;
+
 public class Time implements Serializable
 {
     int hour;
@@ -11,6 +13,7 @@ public class Time implements Serializable
     public Time() {
         hour = 0;
         minute = 0;
+        stringTime = Integer.toString(hour) + ":" + Integer.toString(minute);
     }
 
     public Time(int hour, int minute) {
@@ -20,6 +23,7 @@ public class Time implements Serializable
         if(minute >=0 && minute <= 59) {
             this.minute = minute;
         }
+        stringTime = Integer.toString(hour) + ":" + Integer.toString(minute);
     }
 
     public int getHour() {
@@ -28,6 +32,14 @@ public class Time implements Serializable
 
     public int getMinute() {
         return minute;
+    }
+
+    public String getstringTime()
+    {
+        if(hour == 0) {
+            stringTime = Integer.toString(hour) + ":" + Integer.toString(minute);
+        }
+        return stringTime;
     }
 
     public void setHour(int hour) {

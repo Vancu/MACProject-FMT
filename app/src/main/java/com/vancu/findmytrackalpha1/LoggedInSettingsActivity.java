@@ -4,13 +4,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.vancu.findmytrackalpha1.utils.BottomNavigationViewHelper;
 
+import java.io.File;
+
 public class LoggedInSettingsActivity extends AppCompatActivity {
 
     private static final int ACTIVITY_NUM = 4;
+    Button delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +34,13 @@ public class LoggedInSettingsActivity extends AppCompatActivity {
         Menu menu = BottomNavEx.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+
+
+    }
+
+    public void bDelete(View view) {
+        String dir = getFilesDir().getAbsolutePath();
+        File f0 = new File(dir,"customScheduleList.ser");
+        boolean deleted = f0.delete();
     }
 }
